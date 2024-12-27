@@ -1,12 +1,13 @@
 import streamlit as st
 
-# Blog data with titles and content
+# Blog data with titles, dates, summaries, and content
 blogs = [
     {
-    "title": "Are Large Language Models Just Fancy Chatbots?",
-    "date": "December 24, 2024",
-    # "summary": "Chatbots are just the beginning of what large language models can do.",
-    "content": """
+        "id": "large-language-models",  # Unique ID for query parameter linking
+        "title": "Are Large Language Models Just Fancy Chatbots?",
+        "date": "December 24, 2024",
+        "summary": "Chatbots are just the beginning of what large language models can do.",
+        "content": """
     Artificial intelligence (AI) is no longer just a concept in science fiction, it is real and already affecting people’s daily life. The manner that it exists is vastly different from the robot-filled stories we believed as children. Rather than an anthropomorphic entity, artificial intelligence exists largely behind the scenes, hidden in data centers and algorithms that operate away from public view. 
     
     One of the most accessible and recognizable applications of AI is large language models (LLMs), which power tools like ChatGPT and similar chatbots. For many, these chatbots represent their most direct interaction with AI. Since their launch, these tools have experienced explosive growth in adoption. By February 2024, [20% of Americans reported using ChatGPT](https://www.pewresearch.org/short-reads/2024/03/26/americans-use-of-chatgpt-is-ticking-up-but-few-trust-its-election-information/#:~:text=The%20share%20of%20employed%20Americans,or%20for%20entertainment%20(17%25).). Its versatility is evident in its wide-ranging applications—30% of adults have leveraged it for work-related tasks, such as drafting emails, generating reports, and brainstorming creative ideas.
@@ -20,12 +21,13 @@ blogs = [
     Chatbots are currently the most familiar example of this technology in action, but they’re only scratching the surface of what’s possible.
 
     """
-},
-{
-    "title": "Determinism as a Politic",
-    "date": "November 12, 2024",
-    "summary": "Reflections on my political worldview",
-    "content": """
+    },
+    {
+        "id": "determinism-as-a-politic",  # Unique ID for query parameter linking
+        "title": "Determinism as a Politic",
+        "date": "November 12, 2024",
+        "summary": "Reflections on my political worldview",
+        "content": """
     Eight years ago, November 2016, I recall the chaos of Trump's first victory. I was 16 and it felt like the world was about to end. I remember getting into so many heated conversations with my classmates in my Texas high school. Most of them were Republican just to be edgy, being contrarian just because. Trump was obviously a con man who only cared about himself, and he was going to destroy everything. I saw that even at 16. Yeah, Hillary Clinton sucked, but she was infinitely better than Trump. And I argued this back and forth with my classmates.
 
     Eight years later, I find myself in a similar position, though now it's more of a lukewarm conversation than heated, with my peers in my mid-20s. But something's different this time. I'm not the one emotionally affected by Trump's campaign – it's my peers who are, and they are shocked, maybe even concerned that I’m not. To be clear: my opinion of Trump hasn't changed. He's still a dangerous con man. And Kamala, like Hillary before her, might not be great, but she's better than Trump. Yet somehow, even as a Muslim named Muhammad, in a time when Trump built his platform on Islamophobia, I can't bring myself to feel that same concern that I once did.
@@ -70,33 +72,51 @@ blogs = [
 
     So this isn’t a rejection of hope or a descent into fatalism; in fact, it’s quite the opposite. It’s the belief that, even within the limits of human control, there is still something I can do. My ideals remain intact, but my approach is more inward, and, in my view, more grounded in reality.
     """
-},
+    },
 ]
 
-# Page title
-st.title("Blog")
 
-# Display blog previews with expandable content
-for blog in blogs:
-    # Display blog title and summary
-    st.subheader(blog["title"])
+# Debug: Log query parameters
+query_params = st.query_params
+# st.write("Query Parameters:", query_params)  # Debug print
 
-    col1, col2 = st.columns([4, 1])
+# Retrieve the 'blog' query parameter
+selected_blog_id = query_params.get("blog", [None])
+# st.write("Selected Blog ID:", selected_blog_id)  # Debug print
 
-     # Writing summary in col2
-    if 'summary' in blog:
-        col1.write(blog["summary"])
-        
+if query_params == {} or selected_blog_id == "":
+    # st.title("Blog")  # Page title
 
-    # Writing date in col1
-    if 'date' in blog:
-        col2.write(f"*{blog['date']}*")
+    for blog in blogs:
+        # Display the title of each blog
+        st.subheader(blog["title"])
 
-   
+        # Create columns for layout (title and summary/date)
+        col1, col2 = st.columns([4, 1])
 
-    # Use expander for full content
-    with st.expander("Read More"):
-        st.markdown(blog["content"])
+        # Show blog summary in the first column, if available
+        if 'summary' in blog:
+            col1.write(blog["summary"])
 
-    # Add a horizontal divider
-    st.markdown("---")
+        # Show blog date in the second column, if available
+        if 'date' in blog:
+            col2.write(f"*{blog['date']}*")
+
+        # Add a "Read More" link to view the full blog with the corresponding query parameter
+        st.markdown(f"[Read More](?blog={blog['id']})")
+
+        # Add a horizontal divider between blogs
+        st.markdown("---")
+elif selected_blog_id:
+    # If a specific blog is selected, find it by its ID
+    selected_blog = next((blog for blog in blogs if blog["id"] == selected_blog_id), None)
+    
+    if selected_blog:
+        # Display the full details of the selected blog
+        st.title(selected_blog["title"])  # Blog title
+        st.write(f"*{selected_blog['date']}*")  # Blog date
+        st.markdown(selected_blog["content"])  # Blog content
+        st.markdown("[Back to All Blogs](?blog=)")  # Link to return to the main blog list
+    else:
+        # Handle invalid blog ID
+        st.error("Blog not found. Please check the URL.")
