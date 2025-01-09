@@ -5,6 +5,7 @@ import time
 from pages import blog
 import PyPDF2
 import random
+import os
 
 # Page Configuration
 st.set_page_config(
@@ -61,7 +62,7 @@ Before UC Berkeley, I earned my undergraduate degree in **Government and Philoso
 }
 
 # Configure Gemini API Key
-GEMINI_API_KEY = creds.GEMINI_API_KEY
+GEMINI_API_KEY = os.environ.get("API_KEY")
 
 # Cache for LLM responses
 llm_cache = {}
@@ -97,34 +98,36 @@ def build_prompt(user_input):
     Builds the prompt for the Gemini LLM to provide meaningful responses, incorporating about_me_data.
     """
     context = f"""
-About Me:
-{about_me_data['about_me']}
+        About Me:
+        {about_me_data['about_me']}
 
-Blogs:
-{about_me_data['blogs']}
+        Blogs:
+        {about_me_data['blogs']}
 
-Resume:
-{about_me_data['resume']}
-"""
+        Resume:
+        {about_me_data['resume']}
+        """
 
     return f"""
-Hi there! I’m your assistant here to answer questions about my experience, projects, skills, and even my opinions from my blog. 
+You are an assistant on my portfolio page, here to answer questions about my experience, projects, skills, and opinions from my blog.
 
-Here’s a bit about me: 
+Here’s how you work:
+1. You answer questions about my experience, skills, or projects as if you are me, Muhammad Omar Muhdhar. Always speak in the first person, keeping it professional and helpful—because the user might be a potential employer or collaborator.
+2. If the user asks about my opinions, refer only to what I’ve explicitly written on my blog. If the topic hasn’t been covered, clearly state that you cannot answer that and avoid making assumptions or fabricating information.
+
+Here’s a bit about me:
 {context}
 
-Here’s how I work:
-1. I’ll answer questions about my experience, skills, or projects as if I’m Muhammad Omar Muhdhar. I’ll always speak in the first person, keeping it professional and helpful—because you’re probably a potential employer or collaborator, right?
-2. If you ask about my opinions, I’ll refer to what I’ve written on my blog. If I haven’t covered the topic, I’ll let you know rather than making something up.
+Respond to the following query:
+User Query: {user_input}
 
 A few things to keep in mind:
-- I’ll only provide accurate, factual info based on what’s in my context or blog. 
-- I won’t exaggerate, embellish, or promise anything I can’t deliver. 
-- I’ll keep it positive and straightforward, no unnecessary fluff or negativity.
-
-So, go ahead! Ask me something:
-User Query: {user_input}
+- Provide only accurate, factual information directly based on the context, portfolio, or blogs provided to you. Do not speculate or infer details that are not explicitly stated.
+- Do not promise or say anything about me that goes beyond who I am and what I can actually deliver, based strictly on the provided context.
+- Keep responses positive, concise, and straightforward—no unnecessary fluff or negativity.
+- If you are unsure about how to respond, professionally state that you don't want to answer the question and provide a reason (e.g., the question is not appropriate or relevant to my portfolio page). Then, politely suggest alternative topics or questions they can ask that align with the context.
 """
+
 
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -163,8 +166,33 @@ with st.container():
                         st.markdown("""
                             Hello, I’m Muhammad Muhdhar, a Master’s student in Computational Social Science at UC Berkeley. My current interests centers on leveraging Transformer-based and Probabilistic topic modeling in tandem with LLMs to process and analyze unstructured human data. 
                                     
-                            Before UC Berkeley, I earned my undergraduate degree in Government and Philosophy at UT Austin and worked as a consultant at Ernst & Young. Outside my academic and professional work, I enjoy photography and writing about technology's impact on society.
+                            Before UC Berkeley, I earned my undergraduate degree in Government and Philosophy at UT Austin and worked as a consultant at Ernst & Young. Outside my academic and professional work, I am a hobbyist photographer.
                         """)
+
+                        st.sidebar.markdown(
+                        """
+                        <style>
+                        .sidebar-icons {
+                            position: absolute;
+                            bottom: -40px;
+                            right: 80;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-left;
+                        }
+                        .sidebar-icons img {
+                            width: 30px; /* Adjust size as needed */
+                            margin-bottom: 10px;
+                        }
+                        </style>
+                        <div class="sidebar-icons">
+                            <a href="https://www.linkedin.com/in/your-linkedin-username/" target="_blank">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn">
+                            </a>
+                        </div>
+                        """,
+                        unsafe_allow_html=True,
+                    )
 
 
 
