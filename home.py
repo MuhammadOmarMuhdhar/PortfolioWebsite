@@ -47,7 +47,7 @@ def load_resume(file_path):
     return content.strip()
 
 # Load resume
-resume_file_path = "/Users/muhammadmuhdhar/Desktop/Repo/PortfolioWebsite/Resume_Muhammad Muhdhar-Master.pdf"  
+resume_file_path = "Resume_Muhammad_Muhdhar.pdf"  
 resume_content = load_resume(resume_file_path)
 
 # Update your about_me_data dictionary
