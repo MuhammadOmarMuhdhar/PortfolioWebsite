@@ -1,6 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
-from config import creds
+# from config import creds
 import time
 from pages import blog
 import PyPDF2
