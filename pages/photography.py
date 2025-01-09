@@ -15,7 +15,7 @@ st.markdown(
 st.title("Photography Portfolio")
 
 # Path to the PDF file
-pdf_path = "/Users/muhammadmuhdhar/Desktop/Repo/PortfolioWebsite/pages/Muhammad Muhdhar - Fine Art Photography Gallery.pdf"
+pdf_path = "pages/Muhammad Muhdhar - Fine Art Photography Gallery.pdf"
 
 # Create a link for users to open the PDF in another tab
 st.markdown(

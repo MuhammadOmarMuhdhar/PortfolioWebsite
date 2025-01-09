@@ -16,7 +16,7 @@ st.markdown(
 st.title("My Resume")
 
 # Embed the PDF in an iframe for viewing
-pdf_path = "/Users/muhammadmuhdhar/Desktop/Repo/PortfolioWebsite/Resume_Muhammad Muhdhar-Master.pdf"  # Replace with your PDF file path
+pdf_path = "pages/Resume_Muhammad Muhdhar-DataScientist2.pdf" 
 with open(pdf_path, "rb") as f:
     pdf_data = f.read()
 
