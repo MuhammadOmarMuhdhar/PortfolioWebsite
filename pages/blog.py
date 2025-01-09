@@ -1,5 +1,16 @@
 import streamlit as st
 
+st.markdown(
+        """
+       <style>
+       [data-testid="stSidebar"][aria-expanded="true"]{
+           min-width: 175px;
+           max-width: 175px;
+       }
+       """,
+        unsafe_allow_html=True,
+    )  
+
 # Blog data with titles, dates, summaries, and content
 blogs = [
     {
@@ -72,6 +83,35 @@ blogs = [
 
     So this isn’t a rejection of hope or a descent into fatalism; in fact, it’s quite the opposite. It’s the belief that, even within the limits of human control, there is still something I can do. My ideals remain intact, but my approach is more inward, and, in my view, more grounded in reality.
     """
+    },
+    {
+        "id": "nostalgia-for-boredom",  # Unique ID for query parameter linking
+        "title": "Nostalgia for Boredom",
+        "date": "April 16, 2024",
+        "summary": "The lost art of doing nothing.",
+        "content": """
+    I’m a part of the older end of the Gen Z spectrum, I’m 24, which means I have some recollection of a period before the Internet took over as a central part of our existence. My memories of this pre-internet world are somewhat fleeting, but they still evoke a sense of nostalgia. I remember enough to enable me to draw comparisons between life back then and the digital age we live in today. I remember the excitement of waiting for my favorite TV show to air at a specific time each week and the small joys of playing outside, exploring the neighborhood with friends. These memories, although hazy, serve as a reminder of how much our world has evolved, and as I transition into adulthood, these memories have led me to reflect on the ways the Internet has reshaped our daily experiences. I’ve found myself asking, am I ok with this? Am I ok with how the world has changed?
+
+    As Gen Z, we are truly the first ‘internet generation’, some of my younger peers genuinely can’t remember what life was like before the internet. The internet has changed many things about how we live, like how we think and interact with others. One reason for this is due to the fact that it’s an unlimited resource. When we're online, we can access all sorts of information, media, music, and more without any end. This kind of endless access is new and different for us humans. Our behaviors and characteristics evolved in an environment of scarcity. Before the late 20th century, most people in any society were not familiar with abundance, let alone limitless abundance. Our minds aren't used to things having no limits; our brains don’t even have the capabilities to fully conceptualize or imagine something that is unlimited. This prompts a compelling question: how does a species that is conditioned to finite resources behave when exposed to an infinite resource?
+
+    I don't possess the expertise necessary to tackle this question comprehensively. Instead I want to focus on a specific aspect of our daily lives that has been profoundly altered by the internet – boredom, and specifically, our relationship with it. In a reality where access to stimuli has no bounds, can we even experience boredom?
+
+    Boredom, in the most simple way to describe it, is when your mind is completely idle. It is a state of being in which your brain is not receiving any type of stimulation, where you are experiencing nothing.  As a child, before I discovered what the internet was, I recall constantly being bored. These memories are described well with Mark Fisher’s words in the article No One is Bored, Everything is Boring. In this article Mark Fisher recalls boredom that was caused by “the dreary void of Sundays, the night hours after television stopped broadcasting, even the endless dragging minutes waiting in queues [smartphones didn’t exist to occupy this time].” Today this type of boredom isn’t possible, because when we’re in lines waiting, we have our phones to stimulate our minds. We rarely have moments when our minds are completely idle. 
+
+    Mark Fisher explains that boredom acts as a motivating agent. When someone is experiencing complete idleness, the feeling of nothing, they seek ways to alleviate it by finding something more engaging or stimulating to do. “The vacancy of boredom was a challenge, an injunction and an opportunity:’ he writes, “if we are bored, then it is for us to produce something that will fill up the space.”
+
+    Extrapolating on this thought, Mark’s words implies that boredom creates a reward cycle in your brain that motivates you to want to do things. The feeling of nothingness triggers a drop in dopamine levels as a lack of stimulation is perceived. To counteract this feeling of nothing, you set and complete tasks,  activating the brain's reward system by releasing dopamine.  The anticipation, progress, and eventual completion of tasks form a cycle where dopamine release becomes associated with overcoming the feeling of nothing, motivating future engagement in similar activities.
+
+    “In the intensive, 24/7 environment of capitalist cyberspace” Mark Fisher writes, “ the brain is no longer allowed any time to idle; instead, it is inundated with a seamless flow of low-level stimulus.” 
+
+    However, despite experiencing constant stimulation, of course boredom is still a phenomenon that exists. I find myself feeling bored frequently, and I'm sure many others do too. This means how we experience, and consequently the definition of, boredom has changed.
+
+    This evolution in our experience of boredom can be compared to the experience of over-eating your favorite food. When you consume your favorite food only occasionally, you look forward to it and are even excited about the opportunity to eat it. However, if you begin to eat it every day, the excitement associated with it diminishes; as there is nothing particularly special about it anymore. This parallels the impact that living within a "24/7 environment of capitalist cyberspace" has had on our experience of dopamine. 
+
+    Our limitless exposure to stimuli has had a numbing effect on the feeling of dopamine. The fact that our brains didn't have constant access to it is what made dopamine feel like a reward when we did experience it. In other words, in a world where we are constantly stimulated,  the sensation of being stimulated itself becomes boring. Consequently, the incentive cycle beginning with feeling bored that motivates action, loses its effectiveness. Further perpetuating the feeling of boredom.
+
+    Once upon a time boredom used to be a means to an end. Our minds created a reward cycle that leveraged the feeling of nothingness to cause action. Today, boredom is itself an end. In this modern era where we have access to unlimited stimuli, via the internet, we are stuck in an almost constant state of boredom. Amidst our daily routines, our lives are saturated with patterns that are repetitive and boring, yet our nervous systems remain in a state of constant arousal. Even once we acknowledge the mundane nature of aimlessly scrolling on Tik Tok, listening to our current favorite songs on loop, reading people's opinions on twitter topics that we have no genuine interest in; we find ourselves irresistibly drawn to repeat these tasks. This leaves us devoid of the opportunity to truly experience nothing, an experience that once used to play an important role in the daily lives of humans. 
+     """
     },
 ]
 

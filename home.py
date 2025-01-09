@@ -6,6 +6,25 @@ from pages import blog
 import PyPDF2
 import random
 
+# Page Configuration
+st.set_page_config(
+    page_title="Muhammad Muhdhar Portfolio",
+    page_icon="📘",
+    # layout="wide",  # Use wide layout
+    initial_sidebar_state="expanded"  # Collapse the left menu
+)
+
+st.markdown(
+        """
+       <style>
+       [data-testid="stSidebar"][aria-expanded="true"]{
+           min-width: 175px;
+           max-width: 175px;
+       }
+       """,
+        unsafe_allow_html=True,
+    )   
+
 def load_resume(file_path):
     """
     Reads resume content from a file (PDF or TXT).
@@ -114,87 +133,116 @@ if "messages" not in st.session_state:
 # Ensure session state is initialized
 if "prompt" not in st.session_state:
     st.session_state.prompt = ""
-
-# Introductory content and buttons at the top
 with st.container():
-    # Create two columns for layout
-    col1, col2 = st.columns([1, 2])  # Adjust proportions for better balance
+    # Main layout with two columns
+    col1, col2 = st.columns([11, 1])
 
-    # Add an image in the first column
-    with col1:
-        st.image(
-            'portrait.jpg',
-            use_container_width=True,
-            output_format='PNG'
-        )
+    # Left column (col1) content
+    # with col1: 
+    with st.expander("", expanded=True):
+            # Introductory content and buttons at the top
+        with st.container():
+                    # Nested layout for image and "About Me" content
+            img_col, text_col = st.columns([1, 2.5])  # Adjust proportions for better balance
 
-    # Add "About Me" content in the second column
-    with col2:
+                    # Add an image in the first column
+            with img_col:
+                        # st.markdown(" ")
+                        # st.markdown(" ")
+                        # st.markdown(" ")
+                        st.image(
+                            'portrait.jpg',
+                            width=250,  # Adjust the width to make the image smaller
+                            output_format='PNG'
+                        )
+                        st.markdown(" ")
 
-        st.markdown("##### About Me")
-        st.markdown("""
-            Hello, I’m Muhammad Muhdhar, a Master’s student in Computational Social Science at UC Berkeley. My current work centers on leveraging LLMs to process and analyze unstructured human data, such as open-ended survey responses, and transform it into actionable insights. Applications include product feedback, course evaluations, and employee engagement surveys, with additional potential for studying trends and topics on social media.
+                    # Add "About Me" content in the second column
+            with text_col:
+                        st.markdown("##### About Me")
+                        st.markdown("""
+                            Hello, I’m Muhammad Muhdhar, a Master’s student in Computational Social Science at UC Berkeley. My current interests centers on leveraging Transformer-based and Probabilistic topic modeling in tandem with LLMs to process and analyze unstructured human data. 
+                                    
+                            Before UC Berkeley, I earned my undergraduate degree in Government and Philosophy at UT Austin and worked as a consultant at Ernst & Young. Outside my academic and professional work, I enjoy photography and writing about technology's impact on society.
+                        """)
 
-            Before UC Berkeley, I earned my undergraduate degree in Government and Philosophy at UT Austin and worked as a consultant at Ernst & Young. Outside my academic and professional work, I enjoy photography and writing about technology's impact on society.
- """)
-        # st.markdown('---')
-        
-    
+
+
+    # # Right column (col2) content
+    # with col2: 
+
+       
+    #         # Add buttons with spacing adjustments
+
+    #         if st.button('💻 ', key="blog_button", help="Explore my blog posts"):
+    #             st.write("You clicked Blog!")
+
+    #         if st.button('📄 ', key="resume_button", help="View my resume"):
+    #             st.write("You clicked Resume!")
+
+    #         if st.button('📷 ', key="photo_button", help="Check out my photography portfolio"):
+    #             st.write("You clicked Photography!")
+
+    #         st.markdown("")
+    #         st.markdown("")
+    #         st.markdown("")
+    #         st.markdown("")
+                                    
+
+                
+                        
+
+
+
 
     # Introduce the chatbot functionality
-    st.markdown('---')
-    st.markdown("""
-        Curious to know more about me? Feel free to ask the chatbot below about my background, projects, skills, or even my thoughts on various topics. 
+st.markdown('------')
+st.markdown("""
+        Curious to know more about me? Feel free to ask the chatbot below about my background, projects, skills, or personal interests. 
         """)
-    
-    # Add example questions with buttons
-    st.markdown("###### Examples of what you can ask:")
-    col3, col4, col5,  col6 = st.columns([.77, .9, .85, 1])
-    with col3:
-        if st.button("📞 Contact Info"):
-            st.session_state.prompt = "How can I reach you?"
-    with col4:
-        if st.button("💼 Work Experience"):
-            # List of random questions
-            random_questions = [
-                "Do you have data science experience?",
-                "Tell me about your experience at EY.",
-                "What did you learn as a consultant at EY?",
-                "What projects have you worked on?",
-                "What industries have you worked in?",
-                "What technologies do you specialize in?"
-            ]
-            st.session_state.prompt = random.choice(random_questions)
-    with col5:
-        if st.button("📚 Academic Work"):
-            # List of random questions
-            random_questions = [
-                "What are you studying at UC Berkeley?",
-                "Can you share insights about your current projects?",
-                "What courses have you taken?",
-                "How does your academic work relate to industry?"
-            ]
-            st.session_state.prompt = random.choice(random_questions)
-    # with col6:
-    #     if st.button("Professional Insights"):
-    #         # List of random questions
-    #         random_questions = [
-    #             "What did you learn as a consultant at EY?",
-    #             "How do you approach solving complex problems?",
-    #             "What industries have you worked in?",
-    #             "What is your professional philosophy?"
-    #         ]
-    #         st.session_state.prompt = random.choice(random_questions)
-    with col6:
-        if st.button("🧠 Get to know me"):
-            # List of random questions
-            random_questions = [
-                "What ethical challenges do you see in AI?",
-                "How do you think machine learning can impact society positively?",
-                "What risks do you identify of biased algorithms?",
-                "Do you think AI will replace human creativity?"
-            ]
-            st.session_state.prompt = random.choice(random_questions)
+        
+        # Add example questions with buttons
+st.markdown("###### Examples of what you can ask:")
+col3, col4, col5, col6, col7 = st.columns([1, 1, 1, 1, 10])
+
+with st.container():
+
+        with col3:
+            if st.button("\U0001F4DE"):
+                st.session_state.prompt = "How can I reach you?"
+        with col4:
+            if st.button("\U0001F5C2"):
+                # List of random questions
+                random_questions = [
+                    "Do you have data science experience?",
+                    "Tell me about your experience at EY.",
+                    "What did you learn as a consultant at EY?",
+                    "What projects have you worked on?",
+                    "What industries have you worked in?",
+                    "What technologies do you specialize in?"
+                ]
+                st.session_state.prompt = random.choice(random_questions)
+        with col5:
+            if st.button("\U0001F4DA"):
+                # List of random questions
+                random_questions = [
+                    "What are you studying at UC Berkeley?",
+                    "Can you share insights about your current projects?",
+                    "What courses have you taken?",
+                    "How does your academic work relate to industry?"
+                ]
+                st.session_state.prompt = random.choice(random_questions)
+
+        with col6:
+            if st.button("\U0001F680"):
+                # List of random questions
+                random_questions = [
+                    "What ethical challenges do you see in AI?",
+                    "How do you think machine learning can impact society positively?",
+                    "What risks do you identify of biased algorithms?",
+                    "Do you think AI will replace human creativity?"
+                ]
+                st.session_state.prompt = random.choice(random_questions)
 
 
 # Display chat messages (kept below the intro and buttons)
