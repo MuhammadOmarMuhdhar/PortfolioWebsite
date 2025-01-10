@@ -1,6 +1,6 @@
 import streamlit as st
 from configurations import functions
-from config import creds
+# from config import creds
 import json
 import random
 import time
@@ -131,7 +131,7 @@ def main():
     if 'about_me' not in st.session_state:
         resume_file_path = "configurations/resume.txt"  
         resume_content = functions.load_resume(resume_file_path)
-        
+
         with open("configurations/blogs.json", "r", encoding="utf-8") as f:
             blogs = json.load(f)
         about_me_data = {
