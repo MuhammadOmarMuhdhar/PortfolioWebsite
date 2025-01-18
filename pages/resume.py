@@ -39,39 +39,17 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown(
-    """
-    <style>
-    :root {
-        --primary-color: #1d70b8;
-        --background-color: #121212;
-        --secondary-background-color: #1e1e1e;
-        --text-color: #e0e0e0;
-        --font-family: 'sans-serif';
-    }
-    .stApp {
-        background-color: var(--background-color);
-        color: var(--text-color);
-    }
-    .stSidebar {
-        background-color: var(--secondary-background-color);
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
-st.markdown(
-        """
-       <style>
-            [data-testid="stSidebar"][aria-expanded="true"]{
-                min-width: 175px;
-                max-width: 175px;
-            }
-       <style>
-       """,
-        unsafe_allow_html=True,
-) 
+# st.markdown(
+#         """
+#        <style>
+#             [data-testid="stSidebar"][aria-expanded="true"]{
+#                 min-width: 175px;
+#                 max-width: 175px;
+#             }
+#        <style>
+#        """,
+#         unsafe_allow_html=True,
+# ) 
 
 st.sidebar.markdown("""
          <style>

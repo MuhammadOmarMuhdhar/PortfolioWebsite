@@ -105,5 +105,5 @@ blogs = [
     },
 ]
 
-with open("blogs.json", "w", encoding="utf-8") as f:
+with open("configurations/data/blogs.json", "w", encoding="utf-8") as f:
     json.dump(blogs, f, ensure_ascii=False, indent=4)

@@ -44,28 +44,6 @@ st.markdown(
 )
 
 st.markdown(
-    """
-    <style>
-    :root {
-        --primary-color: #1d70b8;
-        --background-color: #121212;
-        --secondary-background-color: #1e1e1e;
-        --text-color: #e0e0e0;
-        --font-family: 'sans-serif';
-    }
-    .stApp {
-        background-color: var(--background-color);
-        color: var(--text-color);
-    }
-    .stSidebar {
-        background-color: var(--secondary-background-color);
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
-st.markdown(
         """
        <style>
             [data-testid="stSidebar"][aria-expanded="true"]{
@@ -132,7 +110,7 @@ def main():
         resume_file_path = "configurations/resume.txt"  
         resume_content = functions.load_resume(resume_file_path)
 
-        with open("configurations/blogs.json", "r", encoding="utf-8") as f:
+        with open("configurations/data/blogs.json", "r", encoding="utf-8") as f:
             blogs = json.load(f)
         about_me_data = {
             'about_me': """
