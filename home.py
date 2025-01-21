@@ -1,6 +1,6 @@
 import streamlit as st
 from configurations import functions
-from config import creds
+# from config import creds
 import json
 import random
 import time
@@ -92,7 +92,7 @@ st.markdown(
 )
 
 GEMINI_API_KEY = os.environ.get("API_KEY")
-GEMINI_API_KEY = creds.GEMINI_API_KEY
+# GEMINI_API_KEY = creds.GEMINI_API_KEY
 
 llm_cache = {}
 
