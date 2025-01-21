@@ -1,6 +1,6 @@
 import streamlit as st
 from configurations import functions
-# from config import creds
+from config import creds
 import json
 import random
 import time
@@ -8,9 +8,7 @@ import os
 
 st.set_page_config(
     page_title="Muhammad Omar Muhdhar",
-    layout= "centered",  # Use narrow layout
-    initial_sidebar_state="collapsed"  # Collapse the left menu
-)
+    layout= "centered")
 
 st.markdown( """
 
@@ -94,6 +92,7 @@ st.markdown(
 )
 
 GEMINI_API_KEY = os.environ.get("API_KEY")
+GEMINI_API_KEY = creds.GEMINI_API_KEY
 
 llm_cache = {}
 
@@ -106,10 +105,18 @@ def main():
     if "prompt" not in st.session_state:
         st.session_state.prompt = ""
 
+    phtographyfile_path = 'configurations/photography.txt'
+    if 'photography' not in st.session_state:
+            st.session_state.photography = functions.load_resume(phtographyfile_path)
+            phtography_content = st.session_state.photography
+    else:
+            phtography_content = st.session_state.photography
+
     if 'about_me' not in st.session_state:
         resume_file_path = "configurations/resume.txt"  
         resume_content = functions.load_resume(resume_file_path)
-
+       
+        
         with open("configurations/data/blogs.json", "r", encoding="utf-8") as f:
             blogs = json.load(f)
         about_me_data = {
@@ -119,11 +126,15 @@ def main():
                         Before UC Berkeley, I earned my undergraduate degree in Government and Philosophy at UT Austin and worked as a consultant at Ernst & Young. Outside my academic and professional work, I am a hobbyist photographer.
             """,
             'blogs': blogs, 
-            'resume': resume_content 
+            'resume': resume_content,
+            'photography': st.session_state.photography
         }
         st.session_state.about_me = about_me_data
     else:
         about_me_data = st.session_state.about_me
+
+
+    # st.write(st.session_state.about_me)
 
     # Main content
     with st.container():
@@ -149,6 +160,8 @@ def main():
                             st.markdown("##### About Me")
                             st.markdown(about_me_data['about_me'])
 
+
+        
         # Chatbot section
         st.markdown('------')
         st.markdown("""
@@ -161,10 +174,10 @@ def main():
         with st.container():
 
                 with col3:
-                    if st.button("\U0001F4DE"):
+                    if st.button("\U0001F4DE", help="Contact"):
                         st.session_state.prompt = "How can I reach you?"
                 with col4:
-                    if st.button("\U0001F5C2"):
+                    if st.button("\U0001F5C2", help="Experience"):
                         # List of random questions
                         random_questions = [
                             "Do you have data science experience?",
@@ -176,7 +189,7 @@ def main():
                         ]
                         st.session_state.prompt = random.choice(random_questions)
                 with col5:
-                    if st.button("\U0001F4DA"):
+                    if st.button("\U0001F4DA", help="Education"):
                         # List of random questions
                         random_questions = [
                             "What are you studying at UC Berkeley?",
@@ -187,13 +200,13 @@ def main():
                         st.session_state.prompt = random.choice(random_questions)
 
                 with col6:
-                    if st.button("\U0001F680"):
+                    if st.button("\U0001F680", help="Personal Interests"):
                         # List of random questions
                         random_questions = [
-                            "What ethical challenges do you see in AI?",
-                            "How do you think machine learning can impact society positively?",
-                            "What risks do you identify of biased algorithms?",
-                            "Do you think AI will replace human creativity?"
+                            "What is your opinion on the future of AI?",
+                            "What is one way you think technology has impacted society?",
+                            "Tell me about your photography Style.",
+                            "What is your favorite photography subject?",
                         ]
                         st.session_state.prompt = random.choice(random_questions)
 
