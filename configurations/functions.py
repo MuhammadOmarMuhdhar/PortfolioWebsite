@@ -70,6 +70,9 @@ def build_prompt(user_input, about_me_data):
 
         Photography Portfolio:
         {about_me_data['photography']}
+
+        Projects:
+        {about_me_data['projects']}
         """
 
     return f"""
@@ -89,6 +92,7 @@ def build_prompt(user_input, about_me_data):
         - Provide only accurate, factual information directly based on the context, resume, photography portfolio, or blogs provided to you. Do not speculate or infer details that are not explicitly stated.
         - Do not promise or say anything about me that goes beyond who I am and what I can actually deliver, based strictly on the provided context.
         - Keep responses positive, concise, and straightforward.
+        - If talking about a project provide a hyper-linked text to the Github repository.
         - If you are unsure about how to respond, professionally state that you don't want to answer the question and provide a reason (e.g., the question is not appropriate or relevant to my portfolio page). Then, politely suggest alternative topics or questions they can ask that align with the context.
         """
 

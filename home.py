@@ -41,18 +41,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown(
-        """
-       <style>
-            [data-testid="stSidebar"][aria-expanded="true"]{
-                min-width: 175px;
-                max-width: 175px;
-            }
-       <style>
-       """,
-        unsafe_allow_html=True,
-) 
-
 st.sidebar.markdown("""
          <style>
             .sidebar-icons {
@@ -119,13 +107,18 @@ def main():
         
         with open("configurations/data/blogs.json", "r", encoding="utf-8") as f:
             blogs = json.load(f)
+
+        with open("configurations/data/projects.json", "r", encoding="utf-8") as f:
+            projects = json.load(f)
+
         about_me_data = {
             'about_me': """
-                        Hello, I’m Muhammad Muhdhar, a Master’s student in Computational Social Science at UC Berkeley. My current interests centers on leveraging Transformer-based and Probabilistic topic modeling in tandem with LLMs to process and analyze unstructured human data. 
+                        Hello, I'm Muhammad Muhdhar, a graduate student at Berkeley's Computational Social Science program. I am currently engineering a practical pipeline that uses transformer-based AI to enhance and automate research discovery workflows. 
                                                 
-                        Before UC Berkeley, I earned my undergraduate degree in Government and Philosophy at UT Austin and worked as a consultant at Ernst & Young. Outside my academic and professional work, I am a hobbyist photographer.
+                        Before UC Berkeley, I earned my undergraduate degree in Government and Philosophy at UT Austin and worked as a Operations Consultant at Ernst & Young. Outside my academic and professional work, I am a hobbyist photographer.
             """,
             'blogs': blogs, 
+            'projects': projects,
             'resume': resume_content,
             'photography': st.session_state.photography
         }
@@ -217,6 +210,8 @@ def main():
 
         # React to user input or button
     prompt = st.chat_input("Ask a question") or st.session_state.get("prompt", "")
+
+    
     if prompt:
             # Clear the temporary prompt state if used
             st.session_state.pop("prompt", None)
@@ -249,7 +244,22 @@ def main():
 
                 # Display the response
                 placeholder.markdown(response)
+
+
+                st.markdown(
+                    """
+                    <div style="position: left: 40px; bottom: 16px; transform: translateX(25%); 
+                    width: min(704px, 100%); background-color: transparent;
+                    text-align: left; padding: 10px 24px; z-index: 1000;">
+                        <p style="color: var(--st-color-gray-900); font-size: 0.8em; margin: 0; opacity: .5;">
+                            AI can hallucinate. Please verify any information.
+                        </p>
+                    </div>
+                    """, 
+                    unsafe_allow_html=True
+                )
             st.session_state.messages.append({"role": "assistant", "content": response})
+
 
 if __name__ == "__main__":
     main()
