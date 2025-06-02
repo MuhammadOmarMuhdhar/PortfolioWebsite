@@ -1,5 +1,19 @@
 [
     {
+        "Title": "Masters Capstone – Center for Effective Global Action (CEGA)",
+        "Key-words": "Data Engineering, NLP, LLMs, ETL, Streamlit, Visualization, OpenAlex, Gemini, Transformers",
+        "Description": "Developed an end-to-end automated data pipeline for academic research analysis by integrating multiple APIs (OpenAlex, CrossRef) to extract and process research paper metadata into Google Sheets. Built a transformer-based classification model to categorize academic papers by topic using a small annotated corpus, and leveraged large language models (Gemini) to generate narrative summaries for strategic decision-making. Created an interactive Streamlit web application featuring contour graphs and density maps to visualize topic distributions and emerging research trends. Collaborated cross-functionally with researchers and stakeholders through iterative user testing to ensure the tool met long-term research goals and remained accessible to non-technical audiences.",
+        "Status": "Completed",
+        "Link": "https://cega-literature-dashboard.streamlit.app"
+    },
+    {
+        "Title": "Housing Displacement Risk Analysis for Climate-Vulnerable Populations",
+        "Key-words": "Policy Research, R, Statistical Analysis, Data Visualization, Database Development, Environmental Justice, Housing Policy",
+        "Description": "Conducted comprehensive economic and policy analysis examining housing displacement risk among climate-vulnerable populations, with focus on income disparities and housing cost burdens across racial, ethnic, and socioeconomic groups. Performed statistical analysis using R and Excel to evaluate patterns in housing burden and eviction risks, creating demographic maps and temporal trend charts to communicate quantitative insights to diverse audiences. Compiled and harmonized multi-source datasets from the American Community Survey and Eviction Lab at the census tract level, designing a structured database architecture to support scalable population-level risk assessment across 1.78 million residents. Synthesized findings into comprehensive summary reports with actionable, data-driven policy recommendations aligned with environmental and social justice goals.",
+        "Status": "Completed",
+        "Link": ""
+    },
+    {
         "Title": "Economic Lessons From the FIFA World Cup on Brazil",
         "Key-words": "Economics, Data Analysis, Python, Difference-in-Differences (DiD), Synthetic Control Method (SCM)",
         "Description": "This project analyzed the economic and environmental impacts of hosting the 2014 FIFA World Cup in Brazil. Key tasks included automating data retrieval using APIs, conducting Difference-in-Differences (DiD) and Synthetic Control Method (SCM) analyses to assess causal effects on host states versus non-host states, and creating a policy memo with recommendations for sustainable mega-event planning.",
