@@ -1,89 +1,64 @@
-MUHAMMAD OMAR MUHDHAR 
-September 2022
-MACHINE LEARNING  PROJECTS 
-Survey Topic Modeler
-•Built a modular pipeline for data extraction, summarization, and visualization, supported by
-comprehensive documentation to ensure replicability, scalability, and ease of use.
-•Designed and implemented a scalable system in Python with API integrations to extract and organize
-survey data, automating stratification by categories to streamline trend analysis and metadata
-organization.
-•Developed advanced NLP processing to analyze open-ended survey responses, employing
-embeddings and clustering methods to uncover meaningful semantic relationships and insights.
-•Utilized Large Language Models (LLMs) to generate concise, context-aware summaries of clustered
-data, enabling stakeholders to distill key insights from survey results.
-•Created interactive visualizations, integrating LLM-generated summaries with semantic groupings,
-allowing educational institutions to explore trends and relationships in course evaluation data.
-•Prototyped the application using Streamlit, prioritizing user-friendly functionality and Material
-Design-inspired UI/UX principles.muhammad_muhdhar@berkeley.edu  | 817-918-5961 | https://www.linkedin.com/in/muhammad-omar-muhdhar/  
-May 2025EDUCATION
-UNIVERSITY OF CALIFORNIA, BERKELEY
+MUHAMMAD OMAR  MUHDHAR
+January 2025 - February 2025 •Financial Data Analysis & Modeling: Managed fund administration for four private equity funds ($1B+  
+assets). Extracted and analyzed financial data from PDFs, calculated N et Asset Value using Excel models, and 
+recorded data in Investran. Developed Excel VBA solutions for transaction reconciliation and supported third-
+party auditors.
+•Data Management & Process Improvement: Identified workflow gaps causing $2M  worth of reporting errors 
+in private equity accounting  operations; designed and deployed a Power Apps -SharePoint pipeline with metadata  
+forms, automated routing, and approvals. Enhanced data capture, traceability, and audit readiness, ensuring  
+accurate financial reporting.
+•Performance Monitoring & Reporting : Created automated data pipelines using Microsoft Power Automate to  
+streamline performance-related email requests and schedule recurring reports for private equity fund operations.  
+Reduced manual report preparation time from 3 hours to minutes
+•Government Systems & Vendor Invoice Processing: During a 2-month SAM.gov consulting engagement,  
+resolved invoice processing backlogs by migrating financial data into organized Excel spreadsheets and creating  
+systematic workflows for data extraction, validation, and vendor payment processing.May 2025  +1-817-918-5961 muhammad_muhdhar@berkeley.edu https://www.linkedin.com/in/muhammad-omar-muhdhar/
+https://github.com/MuhammadOmarMuhdhar
+TECHNICAL SKILLS
+•Programming & Data Engineering:  Python, SQL, R, Excel, Azure SQL Server, Azure Cosmos DB
+•Business Systems & Workflow Automation : Power Automate, Power Apps, SharePoint, Tableau , Power BI
+RESEARCH PROJECTS 
+Housing Displacement Risk Analysis for Climate-Vulnerable Populations
+•Policy Research & Analysis : Conducted economic and policy analysis to assess housing displacement risks 
+among climate-vulnerable populations, focusing on income disparities and housing cost burdens across racial, 
+ethnic, and socioeconomic groups.
+•Quantitative Data Analysis & Visualization: Used Excel and R for statistical analysis of housing burden and 
+eviction risks across demographics. Created demographic maps and temporal trend charts to clearly 
+communicate insights, making complex data accessible for decision-makers.
+•Multi-Source Database Development: Compiled and harmonized census tract-level data from the American 
+Community Survey and Eviction Lab, to assess risk for 1.78 million residents.September 2022
+July 2022 - August 2024EDUCATION
+UNIVERSITY OF CALIFORNIA, BERKELEY  
 Master of Arts in Computational Social Sciences  
-Relevant Coursework: Statistical Modeling, Machine Learning and Predictive Analytics, Data Visualization and Communication
 UNIVERSITY OF TEXAS AT AUSTIN
-Bachelor of Arts in Government with Honors and a Minor in Philosophy.
+Bachelor of Arts in Government with Honors and a Minor in Philosophy  
 PROFESSIONAL EXPERIENCE 
- Analyst, Ernst & Young Business Consulting
-•Designed and implemented streamlined operational processes, including an efficient document
-management system, resulting in an improvement in workflow efficiency and reduced turnaround time.
-•Leveraged SQL to manage and query large datasets for performance reporting, ensuring precise data
-extraction, transformation, and loading (ETL) processes.
-•Collected and analyzed daily client emails using  Microsoft Power Automate, identifying patterns to
-create procedures for recurring requests and creating a ServiceNow page for remaining inquiries,
-streamlining operational processes  to enhance client interactions.
-•Leveraged analyzed email data to generate monthly KPIs, providing actionable insights that drove
-process improvements and enhanced performance tracking.
-•Implemented Excel-based automation solutions  using VBA to optimize monthly processes, enhancing
-efficiency and  accuracy while enabling more strategic financial analysis.
-•Spearheaded the formation of a new team, developed operational processes, and implemented efficient
-document management practices, fostering a culture of teamwork and collaboration to enhance
-workflow efficiency.July 2022 - August 2024MACHINE LEARNING  PROJECTS 
-Economic Lessons From the FIFA World Cup on Brazil 
-•Extracted economic and environmental data from IBGE (Instituto Brasileiro de Geografia e
-Estatística) and World Bank APIs, automating the data retrieval process for population growth, GDP
-(overall and by industry), unemployment rates, and carbon emissions.
-•Assessed the causal effects of hosting the 2014 FIFA World Cup on host states versus non-host states
-through Difference-in-Differences (DiD) and Synthetic Control Method (SCM) analysis, evaluating
-key economic and environmental indicators to measure short- and long-term impacts.
-•Presented findings in a comprehensive policy memo, highlighting the socio-economic trade-offs and
-environmental consequences of hosting the 2014 FIFA World Cup. Developed actionable
-recommendations for the United States, using lessons from the analysis to guide future strategies for
-planning sustainable mega-events.
-August 2021 - May 2022
-•Conducted a research study evaluating the societal implications of Western and Chinese foreign aid in  
-Uganda. The investigation focused on understanding the rise of China as a global power and its emergence as  
-a novel aid source in Uganda, exploring the self-interested nature of Chinese aid in comparison to the  
-altruistic portrayal of Western aid.
-•Utilized Qualtrics to conduct a survey experiment distributed to 1000 respondents, demonstrating proficiency  
-in handling extensive datasets and employing quantitative methodologies.
-•Leveraged R programming to implement advanced statistical methodologies, including t-tests, in the analysis  
-of survey data. Emphasizing a causal analysis approach, the study sought to  unravel the  cause-and-effect  
-relationships within the socio-economic landscape of foreign aid in  Uganda.
-•Research project culminated in a comprehensive thesis paper and a presentation of survey experiment finding 
-to peers, advisors, and stakeholders.RESEARCH EXPERIENCE  UNIVERSITY OF TEXAS AT  AUSTIN
-Researcher, Government Department at the University of Texas
-LEADERSHIP  EXPERIENCE
-Director of University of Texas at Austin's Black President's Leadership Council
-•Led the organization through a transformative phase, implementing initiatives that contributed to the  
-immediate and broader discourse on racial equity and justice within the university community  while working 
-to build  productive  and collaborative working partnerships among 30+ Black University of Texas undergrad  
-community organizations that represent over 5,000 students.
-•Analyzed university wide data visualizations and datasets to decipher the root cause of issues affecting Black  
-University of Texas students and create solutions to advise University admin on the proper plan to better the  
-Black student experience.
-•Increased the organization’s operational capacity by utilizing effective communication strategies and  
-institutionalizing sustainable routines to increase efficiency, and performance of the organization.
-•Created an  effective communication line between the Black University of Texas student population and  
-University of Texas admin to address issues affecting the Black community on campusJuly 2020 - May 2021
-Director of External Relations for African American Affairs
-•Responsible for optimizing communication strategies in the organization by identifying best methods to reach  
-target audiences.
-•Worked in a team to create engaging outreach for the Black UT population by planning and organizing  
-informative and engaging events.August 2019 - May 2020TECHNICAL SKILLS
-•Programming Languages: Python (Proficient), SQL (Proficient), R (Familiar), Excel (Proficient)
-•Machine Learning: Supervised learning, unsupervised learning, NLP (spaCy, Hugging Face Transformers,  
-scikit-learn)
-•Statistical Analysis: Regression modeling, causal inference, Synthetic Control Methods
-•Data Engineering: API integration, data cleaning, feature engineering, and preprocessing for large-scale datasets  
-(pandas, NumPy)
-•Visualization: Interactive dashboards, clustering visualizations, trend analysis (Streamlit, matplotlib, Plotly,  
-seaborn)
+Business Analyst, Ernst & Young Business Consulting
+Psychology of Poverty Literature Dashb oard,  Center for Effective Global Action
+ 
+ 
+ 
+ •Data Pipeline Development : Integrated multiple third-party APIs (OpenAlex, CrossRef, PubMed) to build a 
+centralized poverty studies database in Google BigQuery, developing a Python-based ETL pipeline to extract 
+and process metadata for 500,000+ academic papers spanning two decades.
+•Processing & Structuring Unstructured  Data: Built a transformer-based classification model trained on a  
+small, annotated corpus to label research papers by topic, enabling structured analysis of academic literature.
+•Interactive Dashboard Design: Created a Streamlit dashboard with bar charts, contour graphs, Sankey  
+diagrams, and density maps to visualize topic distributions and surface emerging research trends in real time.January 2025 - May 2025 •Data Cleaning and Processing:  Processed and validated remote work data covering 110,000+ California state
+employees . Developed data validation procedures and derived metrics such as commute patterns, time savings,
+and resource allocation.
+•Forecasting and Scenario Analysis: Utilized  statistical  models to assess financial and operational impacts of  
+remote work policies, forecasting increases in commute time, miles, and fuel costs under 2-, 3-, and 4-day in-  
+office scenarios.
+•Report Creation and Visualization using Tableau: Designed  a report utiliz ing Tableau to communicate
+workforce policy impacts, including time-series remote work trends, emissions projections, and financial
+summaries.May 2025•Geospatial Data Engineering : Utilized python to develop a GIS data engineering workflow to rescale and 
+harmonize demographic, spatial, and water-use data across inconsistent geographic boundaries (e.g., census 
+tracts, water service areas).
+•Integration of Remote Sensing Data (Light Density from Google Earth): Integrated remote sensing data, 
+specifically nighttime light density from Google Earth Engine, to model intra-unit population distribution. This  
+improved granularity and accuracy in representing population density within irregular spatial units.
+•Documentation & Knowledge Transfer: Created clear technical documentation to ensure reproducibility of 
+the GIS workflow. Supported capacity-building efforts by preparing handoff materials and walkthroughs to 
+enable adoption of methods by internal teams.
+California State Employee Return-to-Office Impact AnalysisDemographic Modeling,  California State Water Resources Control Board January 2025 - May 2025 

@@ -2,7 +2,7 @@ from PyPDF2 import PdfReader
 from pdf2image import convert_from_path
 import pytesseract
 
-resume_file_path = "pages/Muhammad Muhdhar - Fine Art Photography Gallery.pdf"
+resume_file_path = "configurations/Master-Resume-Muhammad Muhdhar.pdf"
 
 content = ""
 try:
@@ -21,5 +21,5 @@ if not content.strip():
         content += pytesseract.image_to_string(image)
 
 # Save to a text file
-with open("photography.txt", "w") as f:
+with open("resume.txt", "w") as f:
     f.write(content)

@@ -68,9 +68,6 @@ def build_prompt(user_input, about_me_data):
         Resume:
         {about_me_data['resume']}
 
-        Photography Portfolio:
-        {about_me_data['photography']}
-
         Projects:
         {about_me_data['projects']}
         """
@@ -89,7 +86,7 @@ def build_prompt(user_input, about_me_data):
         User Query: {user_input}
 
         A few things to keep in mind:
-        - Provide only accurate, factual information directly based on the context, resume, photography portfolio, or blogs provided to you. Do not speculate or infer details that are not explicitly stated.
+        - Provide only accurate, factual information directly based on the context, resume, portfolio, or blogs provided to you. Do not speculate or infer details that are not explicitly stated.
         - Do not promise or say anything about me that goes beyond who I am and what I can actually deliver, based strictly on the provided context.
         - Keep responses positive, concise, and straightforward.
         - If talking about a project provide a hyper-linked text to the Github repository.

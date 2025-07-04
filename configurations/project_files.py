@@ -8,13 +8,11 @@ projects = [
         "Title": "Masters Capstone – Center for Effective Global Action (CEGA)",
         "Key-words": "Data Engineering, NLP, LLMs, ETL, Streamlit, Visualization, OpenAlex, Gemini, Transformers",
         "Description": (
-            "Developed an end-to-end automated data pipeline for academic research analysis by integrating multiple APIs "
-            "(OpenAlex, CrossRef) to extract and process research paper metadata into Google Sheets. Built a transformer-based "
-            "classification model to categorize academic papers by topic using a small annotated corpus, and leveraged large "
-            "language models (Gemini) to generate narrative summaries for strategic decision-making. Created an interactive "
-            "Streamlit web application featuring contour graphs and density maps to visualize topic distributions and emerging "
-            "research trends. Collaborated cross-functionally with researchers and stakeholders through iterative user testing "
-            "to ensure the tool met long-term research goals and remained accessible to non-technical audiences."
+            "Built an automated ETL pipeline integrating OpenAlex and CrossRef APIs to extract research paper metadata into Google Sheets. "
+            "Developed a transformer-based classification model to categorize academic papers by topic using annotated corpus, and leveraged "
+            "Gemini LLMs to generate narrative summaries for strategic decision-making. Created an interactive Streamlit dashboard with "
+            "contour graphs and density maps visualizing topic distributions and research trends. Collaborated cross-functionally through "
+            "iterative user testing to ensure accessibility for non-technical stakeholders."
         ),
         "Status": "Completed",
         "Link": "https://cega-literature-dashboard.streamlit.app"
@@ -23,14 +21,11 @@ projects = [
         "Title": "Housing Displacement Risk Analysis for Climate-Vulnerable Populations",
         "Key-words": "Policy Research, R, Statistical Analysis, Data Visualization, Database Development, Environmental Justice, Housing Policy",
         "Description": (
-            "Conducted comprehensive economic and policy analysis examining housing displacement risk among climate-vulnerable "
-            "populations, with focus on income disparities and housing cost burdens across racial, ethnic, and socioeconomic groups. "
-            "Performed statistical analysis using R and Excel to evaluate patterns in housing burden and eviction risks, creating "
-            "demographic maps and temporal trend charts to communicate quantitative insights to diverse audiences. Compiled and "
-            "harmonized multi-source datasets from the American Community Survey and Eviction Lab at the census tract level, "
-            "designing a structured database architecture to support scalable population-level risk assessment across 1.78 million "
-            "residents. Synthesized findings into comprehensive summary reports with actionable, data-driven policy recommendations "
-            "aligned with environmental and social justice goals."
+            "Analyzed housing displacement risk among climate-vulnerable populations, focusing on income disparities and housing cost burdens "
+            "across demographic groups. Performed statistical analysis in R to evaluate housing burden and eviction risk patterns, creating "
+            "demographic maps and temporal charts. Compiled multi-source datasets from American Community Survey and Eviction Lab at census "
+            "tract level, designing database architecture for scalable risk assessment across 1.78 million residents. Delivered comprehensive "
+            "reports with data-driven policy recommendations for environmental and social justice goals."
         ),
         "Status": "Completed",
         "Link": ""
@@ -39,11 +34,10 @@ projects = [
         "Title": "Economic Lessons From the FIFA World Cup on Brazil",
         "Key-words": "Economics, Data Analysis, Python, Difference-in-Differences (DiD), Synthetic Control Method (SCM)",
         "Description": (
-            "This project analyzed the economic and environmental impacts of hosting the 2014 FIFA "
-            "World Cup in Brazil. Key tasks included automating data retrieval using APIs, conducting "
-            "Difference-in-Differences (DiD) and Synthetic Control Method (SCM) analyses to assess "
-            "causal effects on host states versus non-host states, and creating a policy memo with "
-            "recommendations for sustainable mega-event planning."
+            "Analyzed economic and environmental impacts of hosting the 2014 FIFA World Cup in Brazil. "
+            "Automated data retrieval using APIs and conducted Difference-in-Differences (DiD) and "
+            "Synthetic Control Method (SCM) analyses to assess causal effects on host versus non-host states. "
+            "Created policy memo with recommendations for sustainable mega-event planning."
         ),
         "Status": "Completed",
         "Link": "https://github.com/MuhammadOmarMuhdhar/WorldCupHostCities_Impact"
@@ -52,11 +46,10 @@ projects = [
         "Title": "Statistical Significance in Topic Modeling",
         "Key-words": "NLP, Topic Modeling, Causal Analysis, BERTopic, Transformers, Python",
          "Description": (
-        "This project explores the potential application of topic modeling within social science research. "
-        "Using IMDB reviews of the Netflix series *Squid Game* as a case study, the project "
-        "demonstrates how Natural Language Processing (NLP) techniques can be tailored for causal explanatory purposes. "
-        "The key contribution of this project is a methodology for statistically validating topic models by measuring their ability to explain behavioral outcomes - "
-        "in this case, how BERTopic discovered discussion themes in reviews explain user ratings of the show Squid Game. "
+        "Explores topic modeling applications in social science research using IMDB reviews of Netflix's *Squid Game* as a case study. "
+        "Demonstrates how NLP techniques can be tailored for causal explanatory purposes. Develops methodology for statistically validating "
+        "topic models by measuring their ability to explain behavioral outcomes—specifically how BERTopic-discovered themes in reviews "
+        "explain user ratings."
         ),
         "Status": "On-going",
         "Link": "https://github.com/MuhammadOmarMuhdhar/Statistical-Significance-in-Topic-Modeling"
@@ -65,13 +58,11 @@ projects = [
     "Title": "Density-Aware Spatial Data Rescaling",
     "Key-words": "Data Engineering, GIS, GeoPandas, ETL (Extract, Transform, Load)",
     "Description": (
-        "This project develops a methodology for rescaling demographic and spatial data between different geographic boundaries "
-        "while accounting for intra-unit population density variations. Unlike traditional areal interpolation methods that assume "
-        "uniform distribution within source units, this approach incorporates auxiliary data (e.g., nighttime lights, building density, "
-        "traffic patterns) to estimate sub-unit population density variations. The methodology is particularly valuable when transforming "
-        "data between disparate boundary systems (e.g., census tracts to watersheds) where population distribution is highly heterogeneous. "
-        "The project demonstrates significant improvements in accuracy compared to conventional area-weighted approaches, especially in "
-        "regions with diverse land use patterns and varying population densities."
+        "Develops methodology for rescaling demographic and spatial data between geographic boundaries while accounting for "
+        "intra-unit population density variations. Unlike traditional areal interpolation assuming uniform distribution, incorporates "
+        "auxiliary data (nighttime lights, building density, traffic patterns) to estimate sub-unit density variations. Particularly "
+        "valuable for transforming data between disparate boundary systems (census tracts to watersheds) with heterogeneous population "
+        "distribution. Demonstrates significant accuracy improvements over conventional area-weighted approaches in diverse land use regions."
         ),
         "Status": "On-going",
         "Link": "https://github.com/MuhammadOmarMuhdhar/geoscaler" 

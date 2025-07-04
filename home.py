@@ -5,6 +5,8 @@ import json
 import random
 import time
 import os
+from configurations import project_files, blog_files
+import base64
 
 st.set_page_config(
     page_title="Muhammad Omar Muhdhar",
@@ -41,32 +43,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.sidebar.markdown("""
-         <style>
-            .sidebar-icons {
-                    position: absolute;
-                    bottom: -40px;
-                    right: 80;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-left;
-                            }
-            .sidebar-icons img {
-                    width: 30px; /* Adjust size as needed */
-                    margin-bottom: 10px;
-                            }
-        </style>
-        <div class="sidebar-icons">
-                    <a href="https://www.linkedin.com/in/muhammad-omar-muhdhar/" target="_blank">
-                        <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" width="30">
-                    </a>
-        </div>
-                        """,
-                        unsafe_allow_html=True,
-)
-
-
-
 st.markdown(
     """
     <style>
@@ -80,186 +56,245 @@ st.markdown(
 )
 
 GEMINI_API_KEY = os.environ.get("API_KEY")
-# GEMINI_API_KEY = creds.GEMINI_API_KEY
 
 llm_cache = {}
 
 def main():
 
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
+    # Title with LinkedIn icon
+    st.markdown("""
+        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+            <h1 style="margin: 0; margin-right: 15px;">Muhammad Omar Muhdhar</h1>
+            <a href="https://www.linkedin.com/in/muhammad-omar-muhdhar/" target="_blank" style="text-decoration: none;">
+                <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" width="25" style="vertical-align: middle;">
+            </a>
+        </div>
+    """, unsafe_allow_html=True)
 
-    # Ensure session state is initialized
-    if "prompt" not in st.session_state:
-        st.session_state.prompt = ""
+    tab1, tab2, tab3, tab4 = st.tabs(["Home", "Projects", "Blog", "Resume"])
 
-    phtographyfile_path = 'configurations/photography.txt'
-    if 'photography' not in st.session_state:
-            st.session_state.photography = functions.load_resume(phtographyfile_path)
-            phtography_content = st.session_state.photography
-    else:
-            phtography_content = st.session_state.photography
+    with tab1:
+        st.markdown(" ")
+        # Initialize session state
+        if "messages" not in st.session_state:
+            st.session_state.messages = []
 
-    if 'about_me' not in st.session_state:
-        resume_file_path = "configurations/resume.txt"  
-        resume_content = functions.load_resume(resume_file_path)
-       
+        if "prompt" not in st.session_state:
+            st.session_state.prompt = ""
+
+        # Load about_me data
+        if 'about_me' not in st.session_state:
+            resume_file_path = "configurations/resume.txt"  
+            resume_content = functions.load_resume(resume_file_path)
         
-        with open("configurations/data/blogs.json", "r", encoding="utf-8") as f:
-            blogs = json.load(f)
+            with open("configurations/data/blogs.json", "r", encoding="utf-8") as f:
+                blogs = json.load(f)
 
-        with open("configurations/data/projects.json", "r", encoding="utf-8") as f:
-            projects = json.load(f)
+            with open("configurations/data/projects.json", "r", encoding="utf-8") as f:
+                projects = json.load(f)
 
-        about_me_data = {
-            'about_me': """
-                        Hello, I'm Muhammad Muhdhar, a graduate student at Berkeley's Computational Social Science program. I am currently engineering a practical pipeline that uses transformer-based AI to enhance and automate research discovery workflows. 
-                                                
-                        Before UC Berkeley, I earned my undergraduate degree in Government and Philosophy at UT Austin and worked as a Operations Consultant at Ernst & Young. Outside my academic and professional work, I am a hobbyist photographer.
-            """,
-            'blogs': blogs, 
-            'projects': projects,
-            'resume': resume_content,
-            'photography': st.session_state.photography
-        }
-        st.session_state.about_me = about_me_data
-    else:
-        about_me_data = st.session_state.about_me
+            about_me_data = {
+                'about_me': """
+                            Hello, I'm Muhammad Muhdhar, a recent graduate from Berkeley's Computational Social Science program. I am a data scientist with experience in building scalable data infrastructure, developing machine learning solutions, and creating analytics platforms that bridge technical implementation with business strategy.
+                            
+                            I earned my undergraduate degree in Government and Philosophy at UT Austin and worked as a Business Analyst at Ernst & Young. Outside my academic and professional work, I am a hobbyist photographer.
+   """,
+                'blogs': blogs, 
+                'projects': projects,
+                'resume': resume_content
+            }
+            st.session_state.about_me = about_me_data
+        else:
+            about_me_data = st.session_state.about_me
 
-
-    # st.write(st.session_state.about_me)
-
-    # Main content
-    with st.container():
-    # Main layout with two columns
-        col1, col2 = st.columns([11, 1])
-
-        with st.expander("", expanded=True):
-                # Introductory content and buttons at the top
-            with st.container():
-                        # Nested layout for image and "About Me" content
-                img_col, text_col = st.columns([1, 2.5])  # Adjust proportions for better balance
-
-                        # Add an image in the first column
-                with img_col:
-                            st.image(
-                                'portrait.jpg',
-                                width=250,  # Adjust the width to make the image smaller
-                                output_format='PNG'
-                            )
-                            st.markdown(" ")
-
-                with text_col:
-                            st.markdown("##### About Me")
-                            st.markdown(about_me_data['about_me'])
-
-
+        # Profile section - using expander
+        # with st.expander("", expanded=True):
+        img_col, text_col = st.columns([1, 2.5])
         
-        # Chatbot section
-        st.markdown('------')
+        with img_col:
+            st.image(
+                'portrait.jpg',
+                width=250,
+                output_format='PNG'
+            )
+            st.markdown(" ")
+
+        with text_col:
+            st.markdown("### About Me")
+            st.markdown(about_me_data['about_me'])
+
+        # Chatbot introduction
+
+        col1, col2 = st.columns([6, 10])
+        with col1:
+            st.markdown('------')
         st.markdown("""
                 Curious to know more about me? Feel free to ask the chatbot below about my background, projects, skills, or personal interests. 
         """)
 
+        # Example buttons
         st.markdown("###### Examples of what you can ask:")
         col3, col4, col5, col6, col7 = st.columns([1, 1, 1, 1, 10])
 
-        with st.container():
+        with col3:
+            if st.button("\U0001F4DE", help="Contact"):
+                st.session_state.prompt = "How can I reach you?"
+        
+        with col4:
+            if st.button("\U0001F5C2", help="Experience"):
+                random_questions = [
+                    "Do you have data science experience?",
+                    "Tell me about your experience at EY.",
+                    "What did you learn as a consultant at EY?",
+                    "What projects have you worked on?",
+                    "What industries have you worked in?",
+                    "What technologies do you specialize in?"
+                ]
+                st.session_state.prompt = random.choice(random_questions)
+        
+        with col5:
+            if st.button("\U0001F4DA", help="Education"):
+                random_questions = [
+                    "What is your educational background?",
+                    "Can you share insights about your current projects?",
+                    "What courses have you taken?",
+                    "How does your academic work relate to industry?"
+                ]
+                st.session_state.prompt = random.choice(random_questions)
 
-                with col3:
-                    if st.button("\U0001F4DE", help="Contact"):
-                        st.session_state.prompt = "How can I reach you?"
-                with col4:
-                    if st.button("\U0001F5C2", help="Experience"):
-                        # List of random questions
-                        random_questions = [
-                            "Do you have data science experience?",
-                            "Tell me about your experience at EY.",
-                            "What did you learn as a consultant at EY?",
-                            "What projects have you worked on?",
-                            "What industries have you worked in?",
-                            "What technologies do you specialize in?"
-                        ]
-                        st.session_state.prompt = random.choice(random_questions)
-                with col5:
-                    if st.button("\U0001F4DA", help="Education"):
-                        # List of random questions
-                        random_questions = [
-                            "What are you studying at UC Berkeley?",
-                            "Can you share insights about your current projects?",
-                            "What courses have you taken?",
-                            "How does your academic work relate to industry?"
-                        ]
-                        st.session_state.prompt = random.choice(random_questions)
+        with col6:
+            if st.button("\U0001F680", help="Personal Interests"):
+                random_questions = [
+                    "What is your opinion on the future of AI?",
+                    "What is one way you think technology has impacted society?",
+                    "What's your preferred tech stack for data pipeline development?"
+                ]
+                st.session_state.prompt = random.choice(random_questions)
 
-                with col6:
-                    if st.button("\U0001F680", help="Personal Interests"):
-                        # List of random questions
-                        random_questions = [
-                            "What is your opinion on the future of AI?",
-                            "What is one way you think technology has impacted society?",
-                            "Tell me about your photography Style.",
-                            "What is your favorite photography subject?",
-                        ]
-                        st.session_state.prompt = random.choice(random_questions)
-
-        # Display chat messages (kept below the intro and buttons)
-        for message in st.session_state.messages:
+        # Display all existing chat messages
+        for i, message in enumerate(st.session_state.messages):
             with st.chat_message(message["role"]):
-                st.markdown(message["content"])
+                # Show thinking animation for the latest assistant message if it's being processed
+                if (message["role"] == "assistant" and 
+                    i == len(st.session_state.messages) - 1 and 
+                    st.session_state.get("processing_response", False)):
+                    
+                    placeholder = st.empty()
+                    
+                    # Build the context-aware prompt for the previous user message
+                    user_msg = st.session_state.messages[i-1]["content"]
+                    full_prompt = functions.build_prompt(user_msg, about_me_data)
 
-        # React to user input or button
-    prompt = st.chat_input("Ask a question") or st.session_state.get("prompt", "")
+                    # Generate response using Gemini LLM
+                    try:
+                        response, actual_time = functions.generate_content_cached(
+                            prompt=full_prompt, 
+                            GEMINI_API_KEY=GEMINI_API_KEY, 
+                            llm_cache=llm_cache
+                        )
+                    except Exception as e:
+                        response = f"Sorry, I encountered an error: {e}"
+                        actual_time = 3
 
-    
-    if prompt:
-            # Clear the temporary prompt state if used
+                    # Simulate typing with actual time taken
+                    typing_time = max(1, int(actual_time))
+                    for j in range(typing_time * 3):
+                        dots = '.' * ((j % 3) + 1)
+                        placeholder.markdown(f"Thinking{dots}")
+                        time.sleep(0.5)
+
+                    # Update the message content and mark as processed
+                    st.session_state.messages[i]["content"] = response
+                    st.session_state.processing_response = False
+                    
+                    # Display the final response
+                    placeholder.markdown(response)
+
+                    # Add disclaimer
+                    st.markdown(
+                        """
+                        <div style="text-align: left; padding: 10px 0;">
+                            <p style="color: var(--st-color-gray-900); font-size: 0.8em; margin: 0; opacity: .5;">
+                                AI can hallucinate. Please verify any information.
+                            </p>
+                        </div>
+                        """, 
+                        unsafe_allow_html=True
+                    )
+                else:
+                    # Display regular message
+                    st.markdown(message["content"])
+
+        # Add spacing before chat input
+        st.write("")
+        st.write("")
+        
+        # Chat input - MUST be the very last element in tab1 for bottom positioning
+        prompt = st.chat_input("Ask a question") or st.session_state.get("prompt", "")
+        
+        # Process user input and add placeholder for response
+        if prompt:
+            # Clear the temporary prompt state if used from buttons
             st.session_state.pop("prompt", None)
 
-            # Display user message
-            with st.chat_message("user"):
-                st.markdown(prompt)
+            # Add user message and placeholder assistant message to session state
             st.session_state.messages.append({"role": "user", "content": prompt})
+            st.session_state.messages.append({"role": "assistant", "content": "..."})  # Placeholder
+            st.session_state.processing_response = True
+            
+            # Rerun to display the new messages in the correct position with thinking animation
+            st.rerun()
 
-            # Typing animation for bot response
-            with st.chat_message("assistant"):
-                placeholder = st.empty()
+    with tab2:
+        projects = project_files.projects
 
-                # Build the context-aware prompt
-                full_prompt = functions.build_prompt(prompt, about_me_data)
+        for project in projects:
+            with st.expander("", expanded=True):
+                st.markdown(f"#### {project['Title']}")
+                st.write(f"**Key Words:** {project['Key-words']}")
+                st.markdown(f"**Description:** {project['Description']}")
+                st.write(f'**Status:** {project["Status"]}')
+                st.markdown(f"[View Project]({project['Link']})")
 
-                # Generate response using Gemini LLM and get actual time taken
-                try:
-                    response, actual_time = functions.generate_content_cached(prompt=full_prompt, GEMINI_API_KEY=GEMINI_API_KEY, llm_cache=llm_cache)
-                except Exception as e:
-                    response = f"Sorry, I encountered an error: {e}"
-                    actual_time = 3  # Default fallback time
+    with tab3:
+        blogs = blog_files.blogs
+        
+        for i, blog in enumerate(blogs):
+            with st.container():
+                st.markdown(f"### {blog['title']}")
+                
+                # Meta information
+                col1, col2, col3 = st.columns([2, 1, 1])
+                with col1:
+                    st.caption(f"📅 {blog['date']}")
+                with col2:
+                    st.caption(f"📖 {len(blog['content'].split())} words")
+                with col3:
+                    st.caption(f"⏱️ {max(1, len(blog['content'].split()) // 200)} min read")
+                
+                # Show preview
+                preview = blog['content'][:200] + "..." if len(blog['content']) > 200 else blog['content']
+                st.markdown(preview)
+                
+                # Expandable full content
+                with st.expander("Read full post"):
+                    st.markdown(blog["content"])
+                
+                st.markdown("---")
 
-                # Simulate typing with actual time taken
-                typing_time = max(1, int(actual_time))  # Ensure at least 1 second
-                for i in range(typing_time * 3):  # Typing cycles with all three dots
-                    dots = '.' * ((i % 3) + 1)
-                    placeholder.markdown(f"Thinking{dots}")
-                    time.sleep(0.5)
+    with tab4:
+        # Embed the PDF in an iframe for viewing
+        pdf_path = "configurations/Resume - Muhammad Muhdhar.pdf" 
+        with open(pdf_path, "rb") as f:
+            pdf_data = f.read()
 
-                # Display the response
-                placeholder.markdown(response)
+        # Encode PDF data to base64
+        pdf_base64 = base64.b64encode(pdf_data).decode('utf-8')
 
-
-                st.markdown(
-                    """
-                    <div style="position: left: 40px; bottom: 16px; transform: translateX(25%); 
-                    width: min(704px, 100%); background-color: transparent;
-                    text-align: left; padding: 10px 24px; z-index: 1000;">
-                        <p style="color: var(--st-color-gray-900); font-size: 0.8em; margin: 0; opacity: .5;">
-                            AI can hallucinate. Please verify any information.
-                        </p>
-                    </div>
-                    """, 
-                    unsafe_allow_html=True
-                )
-            st.session_state.messages.append({"role": "assistant", "content": response})
-
+        # Display the PDF
+        st.markdown(f"""
+        <iframe src="data:application/pdf;base64,{pdf_base64}" width="700" height="500" type="application/pdf"></iframe>
+        """, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
