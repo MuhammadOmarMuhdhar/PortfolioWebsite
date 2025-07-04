@@ -43,18 +43,6 @@ projects = [
         "Link": "https://github.com/MuhammadOmarMuhdhar/WorldCupHostCities_Impact"
     },
     {
-        "Title": "Statistical Significance in Topic Modeling",
-        "Key-words": "NLP, Topic Modeling, Causal Analysis, BERTopic, Transformers, Python",
-         "Description": (
-        "Explores topic modeling applications in social science research using IMDB reviews of Netflix's *Squid Game* as a case study. "
-        "Demonstrates how NLP techniques can be tailored for causal explanatory purposes. Develops methodology for statistically validating "
-        "topic models by measuring their ability to explain behavioral outcomes—specifically how BERTopic-discovered themes in reviews "
-        "explain user ratings."
-        ),
-        "Status": "On-going",
-        "Link": "https://github.com/MuhammadOmarMuhdhar/Statistical-Significance-in-Topic-Modeling"
-    },
-    {
     "Title": "Density-Aware Spatial Data Rescaling",
     "Key-words": "Data Engineering, GIS, GeoPandas, ETL (Extract, Transform, Load)",
     "Description": (
@@ -64,7 +52,7 @@ projects = [
         "valuable for transforming data between disparate boundary systems (census tracts to watersheds) with heterogeneous population "
         "distribution. Demonstrates significant accuracy improvements over conventional area-weighted approaches in diverse land use regions."
         ),
-        "Status": "On-going",
+        "Status": "Completed",
         "Link": "https://github.com/MuhammadOmarMuhdhar/geoscaler" 
     },
     
