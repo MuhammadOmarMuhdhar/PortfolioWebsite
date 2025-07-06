@@ -12,12 +12,10 @@ st.set_page_config(
     page_title="Muhammad Omar Muhdhar",
     layout= "centered")
 
-st.markdown( """
-
+st.markdown("""
         <style>   
         #MainMenu {visibility: hidden;}       
-        <style>
-
+        </style>
         """, unsafe_allow_html=True
 )
 

@@ -1,64 +1,102 @@
-MUHAMMAD OMAR  MUHDHAR
-January 2025 - February 2025 •Financial Data Analysis & Modeling: Managed fund administration for four private equity funds ($1B+  
-assets). Extracted and analyzed financial data from PDFs, calculated N et Asset Value using Excel models, and 
-recorded data in Investran. Developed Excel VBA solutions for transaction reconciliation and supported third-
-party auditors.
-•Data Management & Process Improvement: Identified workflow gaps causing $2M  worth of reporting errors 
-in private equity accounting  operations; designed and deployed a Power Apps -SharePoint pipeline with metadata  
-forms, automated routing, and approvals. Enhanced data capture, traceability, and audit readiness, ensuring  
-accurate financial reporting.
-•Performance Monitoring & Reporting : Created automated data pipelines using Microsoft Power Automate to  
-streamline performance-related email requests and schedule recurring reports for private equity fund operations.  
-Reduced manual report preparation time from 3 hours to minutes
-•Government Systems & Vendor Invoice Processing: During a 2-month SAM.gov consulting engagement,  
-resolved invoice processing backlogs by migrating financial data into organized Excel spreadsheets and creating  
-systematic workflows for data extraction, validation, and vendor payment processing.May 2025  +1-817-918-5961 muhammad_muhdhar@berkeley.edu https://www.linkedin.com/in/muhammad-omar-muhdhar/
+MUHAMMAD OMAR MUHDHAR
++1-817-918-5961
+
+muhammad_muhdhar@berkeley.edu
+
+https://www.linkedin.com/in/muhammad-omar-muhdhar/
+
 https://github.com/MuhammadOmarMuhdhar
+
 TECHNICAL SKILLS
-•Programming & Data Engineering:  Python, SQL, R, Excel, Azure SQL Server, Azure Cosmos DB
-•Business Systems & Workflow Automation : Power Automate, Power Apps, SharePoint, Tableau , Power BI
-RESEARCH PROJECTS 
-Housing Displacement Risk Analysis for Climate-Vulnerable Populations
-•Policy Research & Analysis : Conducted economic and policy analysis to assess housing displacement risks 
-among climate-vulnerable populations, focusing on income disparities and housing cost burdens across racial, 
-ethnic, and socioeconomic groups.
-•Quantitative Data Analysis & Visualization: Used Excel and R for statistical analysis of housing burden and 
-eviction risks across demographics. Created demographic maps and temporal trend charts to clearly 
-communicate insights, making complex data accessible for decision-makers.
-•Multi-Source Database Development: Compiled and harmonized census tract-level data from the American 
-Community Survey and Eviction Lab, to assess risk for 1.78 million residents.September 2022
-July 2022 - August 2024EDUCATION
-UNIVERSITY OF CALIFORNIA, BERKELEY  
-Master of Arts in Computational Social Sciences  
+• Programming & Data Engineering: Python, SQL, R, Excel, Azure SQL Server, Azure Cosmos DB
+• Business Systems & Workflow Automation: Power Automate, Power Apps, SharePoint, Tableau, Power BI
+
+EDUCATION
+UNIVERSITY OF CALIFORNIA, BERKELEY
+Master of Arts in Computational Social Sciences
 UNIVERSITY OF TEXAS AT AUSTIN
-Bachelor of Arts in Government with Honors and a Minor in Philosophy  
-PROFESSIONAL EXPERIENCE 
+Bachelor of Arts in Government with Honors and a Minor in Philosophy
+
+May 2025
+September 2022
+
+PROFESSIONAL EXPERIENCE
+
+Data Scientist Intern, Center for Effective Global Action
+•
+•
+•
+•
+January 2025 - May 2025
+• Integrated multiple third-party APIs (OpenAlex, CrossRef, PubMed) to build a centralized poverty studies
+database in Google BigQuery, developing a Python-based ETL pipeline to extract and process metadata for
+500,000+ academic papers spanning two decades.
+• Developed a Python classification system using scikit-learn to automatically categorize and filter research papers.
+• Designed a Streamlit dashboard interface that displays the categorized research data via interactive visualizations,
+enabling stakeholders to extract research intelligence for evidence-driven research prioritization.
+• Managed the complete project lifecycle; defining requirements with stakeholders, overseeing architecture,
+implementing quality control measures, and conducting user training for platform adoption.
+
+
+
+
 Business Analyst, Ernst & Young Business Consulting
-Psychology of Poverty Literature Dashb oard,  Center for Effective Global Action
- 
- 
- 
- •Data Pipeline Development : Integrated multiple third-party APIs (OpenAlex, CrossRef, PubMed) to build a 
-centralized poverty studies database in Google BigQuery, developing a Python-based ETL pipeline to extract 
-and process metadata for 500,000+ academic papers spanning two decades.
-•Processing & Structuring Unstructured  Data: Built a transformer-based classification model trained on a  
-small, annotated corpus to label research papers by topic, enabling structured analysis of academic literature.
-•Interactive Dashboard Design: Created a Streamlit dashboard with bar charts, contour graphs, Sankey  
-diagrams, and density maps to visualize topic distributions and surface emerging research trends in real time.January 2025 - May 2025 •Data Cleaning and Processing:  Processed and validated remote work data covering 110,000+ California state
-employees . Developed data validation procedures and derived metrics such as commute patterns, time savings,
-and resource allocation.
-•Forecasting and Scenario Analysis: Utilized  statistical  models to assess financial and operational impacts of  
-remote work policies, forecasting increases in commute time, miles, and fuel costs under 2-, 3-, and 4-day in-  
-office scenarios.
-•Report Creation and Visualization using Tableau: Designed  a report utiliz ing Tableau to communicate
-workforce policy impacts, including time-series remote work trends, emissions projections, and financial
-summaries.May 2025•Geospatial Data Engineering : Utilized python to develop a GIS data engineering workflow to rescale and 
-harmonize demographic, spatial, and water-use data across inconsistent geographic boundaries (e.g., census 
+•
+•
+•
+•
+July 2022 - August 2024
+Financial Data Analysis & Modeling: Managed fund administration for four private equity funds ($1B+
+assets). Extracted and analyzed financial data from PDFs, calculated Net Asset Value using Excel models, and
+recorded data in Investran. Developed Excel VBA solutions for transaction reconciliation and supported thirdparty auditors.
+Data Management & Process Improvement: Identified workflow gaps causing $2M worth of reporting errors
+in private equity accounting operations; designed and deployed a Power Apps-SharePoint pipeline with metadata
+forms, automated routing, and approvals. Enhanced data capture, traceability, and audit readiness, ensuring
+accurate financial reporting.
+Performance Monitoring & Reporting: Created automated data pipelines using Microsoft Power Automate to
+streamline performance-related email requests and schedule recurring reports for private equity fund operations.
+Reduced manual report preparation time from 3 hours to minutes
+Government Systems & Vendor Invoice Processing: During a 2-month SAM.gov consulting engagement,
+resolved invoice processing backlogs by migrating financial data into organized Excel spreadsheets and creating
+systematic workflows for data extraction, validation, and vendor payment processing.
+
+RESEARCH PROJECTS
+January 2025 - February 2025
+Housing Displacement Risk Analysis for Climate-Vulnerable Populations
+• Policy Research & Analysis: Conducted economic and policy analysis to assess housing displacement risks
+among climate-vulnerable populations, focusing on income disparities and housing cost burdens across racial,
+ethnic, and socioeconomic groups.
+• Quantitative Data Analysis & Visualization: Used Excel and R for statistical analysis of housing burden and
+eviction risks across demographics. Created demographic maps and temporal trend charts to clearly
+communicate insights, making complex data accessible for decision-makers.
+• Multi-Source Database Development: Compiled and harmonized census tract-level data from the American
+Community Survey and Eviction Lab, to assess risk for 1.78 million residents.
+Psychology of Poverty Literature Dashboard, Center for Effective Global Action
+
+Demographic Modeling, California State Water Resources Control Board
+
+January 2025 - May 2025
+
+• Geospatial Data Engineering: Utilized python to develop a GIS data engineering workflow to rescale and
+harmonize demographic, spatial, and water-use data across inconsistent geographic boundaries (e.g., census
 tracts, water service areas).
-•Integration of Remote Sensing Data (Light Density from Google Earth): Integrated remote sensing data, 
-specifically nighttime light density from Google Earth Engine, to model intra-unit population distribution. This  
+• Integration of Remote Sensing Data (Light Density from Google Earth): Integrated remote sensing data,
+specifically nighttime light density from Google Earth Engine, to model intra-unit population distribution. This
 improved granularity and accuracy in representing population density within irregular spatial units.
-•Documentation & Knowledge Transfer: Created clear technical documentation to ensure reproducibility of 
-the GIS workflow. Supported capacity-building efforts by preparing handoff materials and walkthroughs to 
+• Documentation & Knowledge Transfer: Created clear technical documentation to ensure reproducibility of
+the GIS workflow. Supported capacity-building efforts by preparing handoff materials and walkthroughs to
 enable adoption of methods by internal teams.
-California State Employee Return-to-Office Impact AnalysisDemographic Modeling,  California State Water Resources Control Board January 2025 - May 2025 
+California State Employee Return-to-Office Impact Analysis
+
+May 2025
+
+• Data Cleaning and Processing: Processed and validated remote work data covering 110,000+ California state
+employees. Developed data validation procedures and derived metrics such as commute patterns, time savings,
+and resource allocation.
+• Forecasting and Scenario Analysis: Utilized statistical models to assess financial and operational impacts of
+remote work policies, forecasting increases in commute time, miles, and fuel costs under 2-, 3-, and 4-day inoffice scenarios.
+• Report Creation and Visualization using Tableau: Designed a report utilizing Tableau to communicate
+workforce policy impacts, including time-series remote work trends, emissions projections, and financial
+summaries.
+
+
