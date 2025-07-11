@@ -1,10 +1,29 @@
 [
     {
-        "Title": "Masters Capstone – Center for Effective Global Action (CEGA)",
-        "Key-words": "Data Engineering, NLP, LLMs, ETL, Streamlit, Visualization, OpenAlex, Gemini, Transformers",
-        "Description": "Built an automated ETL pipeline integrating OpenAlex and CrossRef APIs to extract research paper metadata into Google Sheets. Developed a transformer-based classification model to categorize academic papers by topic using annotated corpus, and leveraged Gemini LLMs to generate narrative summaries for strategic decision-making. Created an interactive Streamlit dashboard with contour graphs and density maps visualizing topic distributions and research trends. Collaborated cross-functionally through iterative user testing to ensure accessibility for non-technical stakeholders.",
+        "Title": "Interactive Dashboard for Exploring Poverty Research",
+        "Key-words": "API Integration, ETL Pipeline, Google BigQuery, Machine Learning, Scikit-learn, Gemini LLM, Academic Paper Classification, Streamlit Dashboard, Research Intelligence, Project Management",
+        "Description": "Integrated multiple third-party APIs (OpenAlex, CrossRef, PubMed) to build a centralized poverty studies database in Google BigQuery, developing a Python-based ETL pipeline to extract and process metadata for 500,000+ academic papers spanning two decades. Developed a Python classification system using scikit-learn and Gemini LLM to automatically categorize and filter research papers. Designed a Streamlit dashboard interface that displays the categorized research data via interactive visualizations, enabling stakeholders to extract research intelligence for evidence-driven research prioritization. Managed the complete project lifecycle; defining requirements with stakeholders, overseeing architecture, implementing quality control measures, and conducting user training for platform adoption.",
         "Status": "Completed",
-        "Link": "https://cega-literature-dashboard.streamlit.app"
+        "Link": "https://cega-literature-dashboard.streamlit.app",
+        "visuals": [
+            {
+                "path": "configurations/data/visuals/Poverty-Research-Map.jpg",
+                "caption": "Poverty Research Map"
+            }
+        ]
+    },
+    {
+        "Title": "Housing Affordability & Commuting Burdens: Displacement Challenges in Santa Clara County",
+        "Key-words": "Housing Policy, Urban Planning, Statistical Analysis, R, OLS Regression, Chi-Square Testing, ACS Data, Transportation Equity, Displacement Analysis, GIS Mapping",
+        "Description": "Examined the relationship between housing affordability and commuting patterns in Santa Clara County using American Community Survey 5-year estimates. Conducted comprehensive statistical analysis including OLS regression, chi-square tests, and logistic regression to investigate how rent burden (50%+ of income) affects commute times and transportation mode choices across census tracts. Analyzed racial disparities in commuting patterns while controlling for income and housing affordability factors. Created spatial visualizations mapping housing affordability categories and displacement risk indicators across the county. Found that moderate rent burdens significantly impact commuting behavior, and that workers in high-cost areas exhibit distinct transportation patterns including lower drive-alone rates and increased public transit usage among lower-income residents.",
+        "Status": "Completed",
+        "Link": "",
+        "visuals": [
+            {
+                "path": "configurations/data/visuals/commute percentage by race.jpg",
+                "caption": "Housing Affordability Distribution Across Santa Clara County"
+            }
+        ]
     },
     {
         "Title": "Housing Displacement Risk Analysis for Climate-Vulnerable Populations",

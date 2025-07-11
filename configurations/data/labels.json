@@ -1,0 +1,93 @@
+{
+    "study_types": {
+        "Quantitative": {
+            "Experimental": [
+                "Randomized (controlled) trial",
+                "Natural experiments"
+            ],
+            "Quasi-experimental": [
+                "Regression discontinuity",
+                "Difference-in-difference",
+                "Instrumental variable design",
+                "Natural experiments"
+            ],
+            "Non-experimental": [
+                "Observational",
+                "Cross-sectional",
+                "Longitudinal / Panel"
+            ],
+            "Meta-analysis": ["Meta-analysis"]
+        },
+        "Qualitative": {
+            "Methods": [
+                "Case-study",
+                "Ethnography",
+                "First-hand observations",
+                "Interviews",
+                "Focus groups",
+                "Recordings"
+            ],
+        "Mixed Method": ["Systematic review"]
+               
+        }
+    },
+    "poverty_contexts": {
+        "Low resource level": "Low resource level",
+        "Resource volatility": "Resource volatility",
+        "Physical environment": "Physical environment",
+        "Human capital inputs": "Human capital inputs",
+        "Social environment": "Social environment"
+    },
+    "mechanisms": {
+        "Cognitive Function": [
+            "Attention",
+            "Cognitive flexibility",
+            "Executive control",
+            "Executive function",
+            "Fluid intelligence",
+            "Memory",
+            "Working memory"
+        ],
+        "Mental Health": [
+            "Anxiety",
+            "Depression",
+            "Happiness",
+            "Stress"
+        ],
+        "Beliefs": [
+            "Aspirations",
+            "Internalized stigma",
+            "Locus of control",
+            "Self-efficacy",
+            "Self esteem"
+        ],
+        "Preferences": [
+            "Time preferences",
+            "Risk preferences"
+        ]
+    },
+    "Behaviors": {
+        "Economic": [
+            "Borrowing",
+            "Consumption",
+            "Investing",
+            "Labor Supply",
+            "Occupational choice",
+            "Saving"
+        ],
+        "Health": [
+            "Exercise",
+            "Food diet",
+            "Medication adherence"
+        ],
+        "Intergenerational": [
+            "Educational achievement",
+            "Family interaction",
+            "Parenting"
+        ],
+        "Social": [
+            "Crime",
+            "Violence"
+        ]
+    }
+}
