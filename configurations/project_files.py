@@ -17,7 +17,6 @@ projects = [
             "requirements with stakeholders, overseeing architecture, implementing quality control measures, and "
             "conducting user training for platform adoption."
         ),
-        "Status": "Completed",
         "Link": "https://cega-literature-dashboard.streamlit.app", 
         "visuals": [
         {
@@ -35,50 +34,29 @@ projects = [
     "Link": "",
     "visuals": [
         {
-        "path": "configurations/data/visuals/commute percentage by race.jpg",
+        "path": "configurations/data/visuals/Poverty-Research-Map.jpg",
         "caption": "Housing Affordability Distribution Across Santa Clara County"
         }
     ]
     },
     {
-        "Title": "Housing Displacement Risk Analysis for Climate-Vulnerable Populations",
-        "Key-words": "Policy Research, R, Statistical Analysis, Data Visualization, Database Development, Environmental Justice, Housing Policy",
+        "Title": "Stability Forecasting: Data Science Applications in South Asian Peace Process Analysis",
+        "Key-words": "Machine Learning, Random Forest, Peace Agreement Analysis, Conflict Prediction, International Relations, Data Science, Geopolitical Analysis, South Asia",
         "Description": (
-            "Analyzed housing displacement risk among climate-vulnerable populations, focusing on income disparities and housing cost burdens "
-            "across demographic groups. Performed statistical analysis in R to evaluate housing burden and eviction risk patterns, creating "
-            "demographic maps and temporal charts. Compiled multi-source datasets from American Community Survey and Eviction Lab at census "
-            "tract level, designing database architecture for scalable risk assessment across 1.78 million residents. Delivered comprehensive "
-            "reports with data-driven policy recommendations for environmental and social justice goals."
+            "Applied machine learning to analyze peace agreement durability using 2000+ agreements from the University of Edinburgh dataset. "
+            "Developed a Random Forest model with 94.6% accuracy predicting agreement failures, identifying territorial disputes and "
+            "para-statal forces as key breakdown predictors. Applied findings to the May 2025 India-Pakistan ceasefire following Kashmir "
+            "attacks, revealing concerning sustainability prospects. Research shifts focus from predicting conflict onset to forecasting peace "
+            "stability, proposing a live peace index for early warning indicators in this strategically important relationship."
         ),
-        "Status": "Completed",
-        "Link": ""
+        "Link": "https://placeholder-peace-forecasting-link.com",
+        "visuals": [
+            {
+            "path": "configurations/data/visuals/Political Risk Analysis.jpg",
+            "caption": "Peace Agreement Classification by Territorial and Comprehensiveness Factors"
+            }
+        ]
     },
-    {
-        "Title": "Economic Lessons From the FIFA World Cup on Brazil",
-        "Key-words": "Economics, Data Analysis, Python, Difference-in-Differences (DiD), Synthetic Control Method (SCM)",
-        "Description": (
-            "Analyzed economic and environmental impacts of hosting the 2014 FIFA World Cup in Brazil. "
-            "Automated data retrieval using APIs and conducted Difference-in-Differences (DiD) and "
-            "Synthetic Control Method (SCM) analyses to assess causal effects on host versus non-host states. "
-            "Created policy memo with recommendations for sustainable mega-event planning."
-        ),
-        "Status": "Completed",
-        "Link": "https://github.com/MuhammadOmarMuhdhar/WorldCupHostCities_Impact"
-    },
-    {
-    "Title": "Density-Aware Spatial Data Rescaling",
-    "Key-words": "Data Engineering, GIS, GeoPandas, ETL (Extract, Transform, Load)",
-    "Description": (
-        "Develops methodology for rescaling demographic and spatial data between geographic boundaries while accounting for "
-        "intra-unit population density variations. Unlike traditional areal interpolation assuming uniform distribution, incorporates "
-        "auxiliary data (nighttime lights, building density, traffic patterns) to estimate sub-unit density variations. Particularly "
-        "valuable for transforming data between disparate boundary systems (census tracts to watersheds) with heterogeneous population "
-        "distribution. Demonstrates significant accuracy improvements over conventional area-weighted approaches in diverse land use regions."
-        ),
-        "Status": "Completed",
-        "Link": "https://github.com/MuhammadOmarMuhdhar/geoscaler" 
-    },
-
     
     
 ]

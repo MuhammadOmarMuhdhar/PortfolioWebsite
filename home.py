@@ -48,17 +48,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown(
-    """
-    <style>
-    [data-testid="stExpanderToggleIcon"] {
-        display: none;
-        pointer-events: none; /* Disables any interaction */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 GEMINI_API_KEY = os.environ.get("API_KEY")
 
@@ -533,7 +522,6 @@ def main():
                 with st.expander("See more"):
                     st.markdown(f"**Description:** {project['Description']}")
                     
-                    st.write(f'**Status:** {project["Status"]}')
                     
                     # Links
                     col1, col2 = st.columns(2)
