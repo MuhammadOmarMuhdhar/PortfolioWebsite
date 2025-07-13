@@ -5,7 +5,7 @@ import json
 projects = [
 
     {
-        "Title": "Interactive Dashboard for Exploring Poverty Research",
+        "Title": "Research Intelligence Dashboard: ML & NLP-Powered Poverty Studies Analysis",
         "Key-words": "API Integration, ETL Pipeline, Google BigQuery, Machine Learning, Scikit-learn, Gemini LLM, Academic Paper Classification, Streamlit Dashboard, Research Intelligence, Project Management",
         "Description": (
             "Integrated multiple third-party APIs (OpenAlex, CrossRef, PubMed) to build a centralized poverty studies "
@@ -21,7 +21,7 @@ projects = [
         "visuals": [
         {
         "path": "configurations/data/visuals/Poverty-Research-Map.jpg",
-        "caption": "Poverty Research Map"
+        "caption": "Sample visualization from the full interactive dashboard - visit the complete platform to explore 500,000+ research papers with filtering and dynamic analysis capabilities"
         }
         ],
     },

@@ -273,7 +273,7 @@ def render_interactive_sankey():
         st.plotly_chart(fig, use_container_width=True, height=350)
         
         # Add description
-        st.caption("Interactive visualization showing relationships between poverty contexts, study methods, psychological mechanisms, and behavioral outcomes in academic literature. This sample is part of a larger dashboard - view the full interactive dashboard via the link in 'See more' below.")
+        st.caption("Interactive visualization showing relationships between poverty contexts, study methods, psychological mechanisms, and behavioral outcomes in academic literature. This visual is part of a larger dashboard - view the full interactive dashboard via the link in 'See more' below.")
         
     except Exception as e:
         st.error(f"Error generating visualization: {str(e)}")
@@ -319,7 +319,8 @@ def main():
         </div>
     """, unsafe_allow_html=True)
 
-    tab1, tab2, tab3, tab4 = st.tabs(["Home", "Projects", "Blog", "Resume"])
+    tab1, tab2, tab4 = st.tabs(["Home", "Projects", "Resume"])
+    # tab1, tab2, tab3, tab4 = st.tabs(["Home", "Projects", "Blog", "Resume"])
 
     with tab1:
         st.markdown(" ")
@@ -335,8 +336,8 @@ def main():
             resume_file_path = "configurations/resume.txt"  
             resume_content = functions.load_resume(resume_file_path)
         
-            with open("configurations/data/blogs.json", "r", encoding="utf-8") as f:
-                blogs = json.load(f)
+            # with open("configurations/data/blogs.json", "r", encoding="utf-8") as f:
+            #     blogs = json.load(f)
 
             with open("configurations/data/projects.json", "r", encoding="utf-8") as f:
                 projects = json.load(f)
@@ -347,7 +348,7 @@ def main():
                             
                             I earned my undergraduate degree in Government and Philosophy at UT Austin and worked as a Business Analyst at Ernst & Young. Outside my academic and professional work, I am a hobbyist photographer.
    """,
-                'blogs': blogs, 
+                # 'blogs': blogs, 
                 'projects': projects,
                 'resume': resume_content
             }
@@ -404,7 +405,7 @@ def main():
             if st.button("\U0001F4DA", help="Education"):
                 random_questions = [
                     "What is your educational background?",
-                    "Can you share insights about your current projects?",
+                    "Can you share insights about your projects?",
                     "What courses have you taken?",
                     "How does your academic work relate to industry?"
                 ]
@@ -413,8 +414,6 @@ def main():
         with col6:
             if st.button("\U0001F680", help="Personal Interests"):
                 random_questions = [
-                    "What is your opinion on the future of AI?",
-                    "What is one way you think technology has impacted society?",
                     "What's your preferred tech stack for data pipeline development?"
                 ]
                 st.session_state.prompt = random.choice(random_questions)
@@ -503,7 +502,7 @@ def main():
                 st.write(f"**Keywords:** {project['Key-words']}")
                 
                 # Special handling for Masters Capstone project - show interactive visual
-                if "Poverty Research" in project['Title'] or "CEGA" in project['Title']:
+                if "Research Intelligence Dashboard" in project['Title'] or "CEGA" in project['Title']:
                     # Show interactive Sankey diagram instead of static image
                     render_interactive_sankey()
                 else:
@@ -532,31 +531,31 @@ def main():
                 
                 st.markdown("---")
 
-    with tab3:
-        blogs = blog_files.blogs
-        
-        for i, blog in enumerate(blogs):
-            with st.container():
-                st.markdown(f"### {blog['title']}")
-                
-                # Meta information
-                col1, col2, col3 = st.columns([2, 1, 1])
-                with col1:
-                    st.caption(f"📅 {blog['date']}")
-                with col2:
-                    st.caption(f"📖 {len(blog['content'].split())} words")
-                with col3:
-                    st.caption(f"⏱️ {max(1, len(blog['content'].split()) // 200)} min read")
-                
-                # Show preview
-                preview = blog['content'][:200] + "..." if len(blog['content']) > 200 else blog['content']
-                st.markdown(preview)
-                
-                # Expandable full content
-                with st.expander("Read full post"):
-                    st.markdown(blog["content"])
-                
-                st.markdown("---")
+    # with tab3:
+    #     blogs = blog_files.blogs
+    #     
+    #     for i, blog in enumerate(blogs):
+    #         with st.container():
+    #             st.markdown(f"### {blog['title']}")
+    #             
+    #             # Meta information
+    #             col1, col2, col3 = st.columns([2, 1, 1])
+    #             with col1:
+    #                 st.caption(f"📅 {blog['date']}")
+    #             with col2:
+    #                 st.caption(f"📖 {len(blog['content'].split())} words")
+    #             with col3:
+    #                 st.caption(f"⏱️ {max(1, len(blog['content'].split()) // 200)} min read")
+    #             
+    #             # Show preview
+    #             preview = blog['content'][:200] + "..." if len(blog['content']) > 200 else blog['content']
+    #             st.markdown(preview)
+    #             
+    #             # Expandable full content
+    #             with st.expander("Read full post"):
+    #                 st.markdown(blog["content"])
+    #             
+    #             st.markdown("---")
 
     with tab4:
         # Embed the PDF in an iframe for viewing

@@ -42,12 +42,12 @@ class Sankey:
             },
             'mechanism': {
                 'hierarchy_key': 'mechanisms',
-                'display_name': 'Mechanism',
+                'display_name': 'Poverty Mechanisms',
                 'color_offset': 10
             },
             'behavior': {
                 'hierarchy_key': 'Behaviors',
-                'display_name': 'Behavior',
+                'display_name': 'Behavioral Outcomes',
                 'color_offset': 15
             }
         }
@@ -421,7 +421,7 @@ class Sankey:
         """Create the Plotly Sankey figure."""
         fig = go.Figure(data=[go.Sankey(
             node=dict(
-                pad=15,
+                pad=25,
                 thickness=20,
                 line=dict(color="black", width=2),
                 label=node_labels,
@@ -447,11 +447,13 @@ class Sankey:
         if num_columns > 1:
             for i, col_name in enumerate(columns_to_show):
                 display_name = self.available_columns.get(col_name, {}).get('display_name', col_name.replace('_', ' ').title())
+                # Stack multi-word column headers
+                stacked_name = display_name.replace(' ', '<br>') if ' ' in display_name else display_name
                 x_pos = i / (num_columns - 1) if num_columns > 1 else 0.5
                 annotations.append(
-                    dict(x=x_pos, y=1.1, text=display_name, showarrow=False, 
+                    dict(x=x_pos, y=1.15, text=stacked_name, showarrow=False, 
                          xref="paper", yref="paper",
-                         font=dict(size=16, color="black", weight="bold"))
+                         font=dict(size=14, color="black", weight="bold"))
                 )
 
         annotations.append(
@@ -462,8 +464,16 @@ class Sankey:
         )
         
         fig.update_layout(
+            title=dict(
+                text="Poverty Research Taxonomy: Interactive Classification Flow Chart",
+                x=0.0,
+                y=0.98,
+                xanchor='left',
+                yanchor='top',
+                font=dict(size=18, color="black", family="Arial, sans-serif")
+            ),
             font_size=12,
-            height=600,
+            height=750,
             width=1200,
             hovermode='closest',
             hoverlabel=dict(

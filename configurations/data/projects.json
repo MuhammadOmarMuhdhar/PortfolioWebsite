@@ -1,13 +1,13 @@
 [
     {
-        "Title": "Interactive Dashboard for Exploring Poverty Research",
+        "Title": "Research Intelligence Dashboard: ML & NLP-Powered Poverty Studies Analysis",
         "Key-words": "API Integration, ETL Pipeline, Google BigQuery, Machine Learning, Scikit-learn, Gemini LLM, Academic Paper Classification, Streamlit Dashboard, Research Intelligence, Project Management",
         "Description": "Integrated multiple third-party APIs (OpenAlex, CrossRef, PubMed) to build a centralized poverty studies database in Google BigQuery, developing a Python-based ETL pipeline to extract and process metadata for 500,000+ academic papers spanning two decades. Developed a Python classification system using scikit-learn and Gemini LLM to automatically categorize and filter research papers. Designed a Streamlit dashboard interface that displays the categorized research data via interactive visualizations, enabling stakeholders to extract research intelligence for evidence-driven research prioritization. Managed the complete project lifecycle; defining requirements with stakeholders, overseeing architecture, implementing quality control measures, and conducting user training for platform adoption.",
         "Link": "https://cega-literature-dashboard.streamlit.app",
         "visuals": [
             {
                 "path": "configurations/data/visuals/Poverty-Research-Map.jpg",
-                "caption": "Poverty Research Map"
+                "caption": "Sample visualization from the full interactive dashboard - visit the complete platform to explore 500,000+ research papers with filtering and dynamic analysis capabilities"
             }
         ]
     },
